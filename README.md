@@ -1,9 +1,11 @@
 # Vous-etes-le-heros-Option-de-tuer
 
-**Genre**: Action, Policer
+**Genre:** Action, Policer
 
 **Inspiration:** Batman
 
-**Palette de couleurs:** https://htmlcolorcodes.com
+**Palette de couleurs:** coolors.co
 
 ## Diagramme
+
+![Diagramme de l'hisotoire](assets/proulx_pl_PS1.1_582-324MO.png)
