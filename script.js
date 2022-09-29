@@ -53,15 +53,17 @@ let chapitre1 = {
   option:  [
     let choix1 = {
         text: "Commander de la pizza",
-        action: "goToChapter("chapitre2")",
+        action: goToChapter("chapitre2"),
     },
+    
     let choix2 = {
         text: "Retourner se coucher",
-        action: "goToChapter("chapitre2")",
+        action: goToChapter("chapitre2"),
     },
-    let choix3= {
+
+    let choix3 = {
         text: "Décide de faire la mission tout de suite",
-        action: "goToChapter("badchoice1")",
+        action: goToChapter("badchoice1"),
     }
 
   ],
@@ -132,8 +134,26 @@ let chapitre8 = {
 };
 
 let chapitre9 = {
-  subtitle: "",
-  text: "",
-  option: [""],
+  subtitle: "Le choix final",
+  text: "Vous trouvez enfin professeur Crâne, sans ses hommes, sans ses armes, sans rien. Il est sans défense. Vous pointer votre revolver contre son front. Que faites-vous?",
+  option: [
+    let tuer = {
+        text: "Tuer",
+        action: goToChapter("badending"),
+    },
+
+    let mercy = {
+        text: "Épargner",
+        action: goToChapter("goodending");
+    }
+  ],
   img: "",
 };
+
+let badending = {
+    text: "Vous tuer Professeur Crâne pendant qu'il ricanait, et vous sauvez l'humanité. Mais votre partenaire prise en otage meurt aussi en même temps sans vous en aperçevoir."
+}
+
+let goodending ={
+    text: "Vous épargnez Professeur Crâne et mettre son plan à terme, et l'emporter à la justice. Félicitations!!!",
+}
