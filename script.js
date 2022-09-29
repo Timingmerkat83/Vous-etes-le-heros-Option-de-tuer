@@ -212,7 +212,16 @@ let ch4altpath = {
 let chapitre5 = {
   subtitle: "",
   text: "Après avoir pris un bon café, vous et votre partenaire discutiez d'un plan pour infiltrer la forteresse du Professeur Crâne. Après la discussion vous vous dirigiez vers sa forteresse.",
-  option: [""],
+  option: [
+    (devant = {
+      text: "Devant",
+      action: goToChapter("badchoice7"),
+    }),
+    (derriere = {
+      text: "Derrière",
+      action: goToChapter("chapitre6"),
+    }),
+  ],
   img: "",
 };
 
