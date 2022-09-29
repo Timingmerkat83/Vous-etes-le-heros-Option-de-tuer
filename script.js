@@ -68,7 +68,10 @@ let chaptersObj = {
 
 let prologue = {
   subtitle: "Option de tuer",
-  text: "Vous incarnez une jeune adulte sous le nom de Bonnie Parker, elle vie avec son oncle Arthur. Étant témoin du meurtre de ses parents, elle décidèrent de poursuivre ce que son père avait commencé, la recherche d'un homme planifiant de causer la mort de millions de personnes à travers le pays",
+  text: "Vous incarnez une jeune adulte sous le nom de Bonnie Parker," + 
+  "elle vie avec son oncle Arthur. Étant témoin du meurtre de ses parents," +  
+  "elle décidèrent de poursuivre ce que son père avait commencé," +  
+  "la recherche d'un homme planifiant de causer la mort de millions de personnes à travers le pays",
 };
 
 let chapitre1 = {
