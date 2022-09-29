@@ -29,17 +29,30 @@ let chaptersObj = {
     console.log(chapitre4.subtitle, chapitre4.text);
   },
 
-  chapitre5: function goToChapter() {
-    console.log(chapitre5.subtitle, chapitre5.text);
+  ch4path1: function goToChapter() {
+    console.log(ch4path1.subtitle, ch4path1.text);
   },
 
-  chapitre6: function goToChapter() {
-    console.log(chapitre6.subtitle, chapitre6.text);
+  ch4path2: function goToChapter() {
+    console.log(ch4path2.subtitle, ch4path2.text);
   },
 
   chapitre7: function goToChapter() {
     console.log(chapitre7.subtitle, chapitre7.text);
   },
+
+chapitre9 : function goToChapter() {
+    console.log(chapitre9.subtitle, chapitre9.text);
+},
+
+badending : function goToChapter() {
+    console.log(badending.text);
+},
+
+goodending : function goToChapter() {
+    console.log(goodending.text);
+},
+
 };
 
 let prologue = {
@@ -78,17 +91,41 @@ let badchoice1 = {
 let chapitre2 = {
   subtitle: "L'appel",
   text: "Vous recevez un appel, votre mission est de trouver professeur Crâne, et l'arrêter ou de le tuer, à vous de faire cette décision. Maintenant il faut que vous vous trouver un moyen de transport, que décidez-vous de prendre?",
-  option: [ let car],
+  option: [ let car = {
+    text: "Prendre votre voiture",
+    action: goToChapter("badchoice2"),
+    }, 
+
+    let walk = {
+    text: "Se rendre à pieds",
+    action: goToChapter("chapitre3"),
+    },
+    let bike = {
+        text: "Se rendre en vélo",
+        action: goToChapter("altpath1"),
+    }
+],
   img: "assets/phonecall.jpg",
 };
 
+let altpath1 ={
+    text: "Vous prenez votre vélo mais vous n'êtes pas sur de vouloir mettre un casque de protection, voulez-vous le mettre?",
+    option: [
+        let yes = {
+            text: "Oui",
+            action: goToChapter("badchoice3"),
+        }
+    ]
+}
+
 let badchoice2 = {
     text: "Vous vous décidiez de vous y rendre en voiture, mais vous vous faites arrêter par la police pour excès de vitesse",
-    img: "assest/arrest.jpg ",
+    img: "assets/arrest.jpg ",
 };
 
 let badchoice3 = {
-
+    text:"En mettant votre casque, vous vous rendez compte qu'il était trop gros et donc vous cache la vue. Donc vous vous enfargez sur un homme armé, et il vous tire dessus",
+    img: "assets/falling.jpg",
 }
 
 let chapitre3 = {
@@ -105,14 +142,14 @@ let chapitre4 = {
   img: "",
 };
 
-let chapitre5 = {
+let ch4path1 = {
   subtitle: "",
   text: "",
   option: [""],
   img: "",
 };
 
-let chapitre6 = {
+let ch4path2 = {
   subtitle: "",
   text: "",
   option: [""],
@@ -144,7 +181,7 @@ let chapitre9 = {
 
     let mercy = {
         text: "Épargner",
-        action: goToChapter("goodending");
+        action: goToChapter("goodending"),
     }
   ],
   img: "",
