@@ -40,53 +40,62 @@ let prologue = {
 let chapitre1 = {
   subtitle: "Le début de l'histoire",
   text: "Il est 7h30, et vous êtes confortable dans votre lit douillet. Votre alarme sonne, que faites-vous?",
-  option: 
+  option: [""],
+  img: "assets/cadran.jpg",
 };
 
 let chapitre2 = {
   subtitle: "L'appel",
   text: "Vous recevez un appel, votre mission est de trouver professeur Crâne, et l'arrêter ou de le tuer, à vous de faire cette décision. Maintenant il faut que vous vous trouver un moyen de transport, que décidez-vous de prendre?",
-  option: ,
- };
+  option: [""],
+  img: "asset/phonecall.jpg",
+};
 
 let chapitre3 = {
   subtitle: "La mission",
   text: "Vous arrivez à destination. Maintenant, vous prenez connaissance aux informations de la mission et du suspect en question. Que faites-vous?",
-  option: "" ,
+  option: [""],
+  img: "",
 };
 
 let chapitre4 = {
   subtitle: "Le commencement de la mission",
   text: "Maintenant que vous avez pris connaissance à la mission qui vous êtes attribué, vous devez maintenant commencer par vous un plan de match. Par où commencez-vous?",
-  option: "",
+  option: [""],
+  img: "",
 };
 
 let chapitre5 = {
   subtitle: "",
   text: "",
-  option:  "",
+  option: [""],
+  img: "",
 };
 
 let chapitre6 = {
   subtitle: "",
   text: "",
-  option: "",
+  option: [""],
+  img: "",
 };
 
 let chapitre7 = {
   subtitle: "",
   text: "",
-  option:"" ,
+  option: [""],
+  img: "",
 };
 
 let chapitre8 = {
   subtitle: "",
   text: "",
-  option: "",
+  option: [""],
+  img: "",
 };
 
 let chapitre9 = {
   subtitle: "",
   text: "",
-  option: "",
+  option: [""],
+  img: "",
 };
