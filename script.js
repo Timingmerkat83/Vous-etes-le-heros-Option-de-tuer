@@ -101,7 +101,9 @@ let badchoice1 = {
 
 let chapitre2 = {
   subtitle: "L'appel",
-  text: "Vous recevez un appel, votre mission est de trouver professeur Crâne, et l'arrêter ou de le tuer, à vous de faire cette décision. Maintenant il faut que vous vous trouver un moyen de transport, que décidez-vous de prendre?",
+  text: "Vous recevez un appel, votre mission est de trouver professeur Crâne," + 
+  "et l'arrêter ou de le tuer, à vous de faire cette décision." + 
+  "Maintenant il faut que vous vous trouver un moyen de transport, que décidez-vous de prendre?",
   option: [
     (car = {
       text: "Prendre votre voiture",
@@ -168,11 +170,13 @@ let chapitre3 = {
 };
 
 let badchoice4 = {
-  text: "Vous apprenez aux nouvelles que Professeur Crâne a mis son plan en exécution et un grand nombre de personnes ont dû payer le prix. Dans le plus grand des remords de n'avoir rien fait, vous vous tuer.",
+  text: "Vous apprenez aux nouvelles que Professeur Crâne a mis son plan en exécution." + 
+  " Un grand nombre de personnes ont dû payer le prix. Dans le plus grand des remords de n'avoir rien fait, vous vous tuer.",
 };
 
 let badchoice5 = {
-  text: "Quelqu'un a tracé votre numéro lorsque vous avez appellé votre partenaire et a trouvé votre numéro d'appartement et vous kidnappe",
+  text: "Quelqu'un a tracé votre numéro lorsque vous avez appellé" + 
+  "votre partenaire et a trouvé votre numéro d'appartement et vous kidnappe",
 };
 
 let chapitre4 = {
