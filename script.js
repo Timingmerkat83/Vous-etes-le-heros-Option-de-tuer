@@ -29,12 +29,16 @@ let chaptersObj = {
     console.log(chapitre4.subtitle, chapitre4.text);
   },
 
-  ch4path1: function goToChapter() {
-    console.log(ch4path1.subtitle, ch4path1.text);
+  badchoice4: function goToChapter() {
+    console.log(badchoice4.text);
   },
 
-  ch4path2: function goToChapter() {
-    console.log(ch4path2.subtitle, ch4path2.text);
+  badchoice5: function goToChapter() {
+    console.log(badchoice5.text);
+  }
+
+  ch4altpath: function goToChapter() {
+    console.log(ch4path1.subtitle, ch4path1.text);
   },
 
   chapitre7: function goToChapter() {
@@ -91,7 +95,8 @@ let badchoice1 = {
 let chapitre2 = {
   subtitle: "L'appel",
   text: "Vous recevez un appel, votre mission est de trouver professeur Crâne, et l'arrêter ou de le tuer, à vous de faire cette décision. Maintenant il faut que vous vous trouver un moyen de transport, que décidez-vous de prendre?",
-  option: [ let car = {
+  option: [ 
+    let car = {
     text: "Prendre votre voiture",
     action: goToChapter("badchoice2"),
     }, 
@@ -100,10 +105,11 @@ let chapitre2 = {
     text: "Se rendre à pieds",
     action: goToChapter("chapitre3"),
     },
+
     let bike = {
         text: "Se rendre en vélo",
         action: goToChapter("altpath1"),
-    }
+    },
 ],
   img: "assets/phonecall.jpg",
 };
@@ -114,8 +120,13 @@ let altpath1 ={
         let yes = {
             text: "Oui",
             action: goToChapter("badchoice3"),
-        }
-    ]
+        },
+
+        let no = {
+            text: "Non",
+            action: goToChapter("chapitre3"),
+        },
+    ],
 }
 
 let badchoice2 = {
@@ -131,30 +142,50 @@ let badchoice3 = {
 let chapitre3 = {
   subtitle: "La mission",
   text: "Vous arrivez à destination. Maintenant, vous prenez connaissance aux informations de la mission et du suspect en question. Que faites-vous?",
-  option: [""],
+  option: [
+    let path1 = {
+        text:"Retourner chez vous",
+        action:goToChapter("badchoice4") ,
+    },
+    let path2 = {
+        text:"Appeller votre partenaire",
+        action:goToChapter("badchoice5"),
+    },
+  let path3 = {
+    text:"Aller directement chez votre partenaire",
+    action:goToChapter("chapitre4") ,
+  },
+
+  let path4 = {
+    text:" Commencer la mission toute seule",
+    action:goToChapter("ch4altpath") ,
+  },
+
+  ],
   img: "assets/car.jpg",
 };
 
+let badchoice4 = {
+    text: "Vous apprenez aux nouvelles que Professeur Crâne a mis son plan en exécution et un grand nombre de personnes ont dû payer le prix. Dans le plus grand des remords de n'avoir rien fait, vous vous tuer.",
+}
+
+let badchoice5 = {
+    text: "Quelqu'un a tracé votre numéro lorsque vous avez appellé votre partenaire et a trouvé votre numéro d'appartement et vous kidnappe",
+}
+
 let chapitre4 = {
   subtitle: "Le commencement de la mission",
-  text: "Maintenant que vous avez pris connaissance à la mission qui vous êtes attribué, vous devez maintenant commencer par vous un plan de match. Par où commencez-vous?",
   option: [""],
   img: "",
 };
 
-let ch4path1 = {
+let ch4altpath = {
   subtitle: "",
   text: "",
   option: [""],
   img: "",
 };
 
-let ch4path2 = {
-  subtitle: "",
-  text: "",
-  option: [""],
-  img: "",
-};
 
 let chapitre7 = {
   subtitle: "",
