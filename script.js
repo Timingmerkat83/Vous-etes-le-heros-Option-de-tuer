@@ -7,9 +7,19 @@ let chaptersObj = {
     console.log(chapitre1.subtitle, chapitre1.text);
   },
 
+  badchoice1: function goToChapter(){
+    console.log(badchoice1.text);
+  },
+
   chapitre2: function goToChapter() {
     console.log(chapitre2.subtitle, chapitre2.text);
   },
+ badchoice2: function goToChapter(){
+    console.log(badchoice2.text);
+ },
+ badchoice3: function goToChapter(){
+    console.log(badchoice3.text);
+ },
 
   chapitre3: function goToChapter() {
     console.log(chapitre3.subtitle, chapitre3.text);
@@ -40,22 +50,50 @@ let prologue = {
 let chapitre1 = {
   subtitle: "Le début de l'histoire",
   text: "Il est 7h30, et vous êtes confortable dans votre lit douillet. Votre alarme sonne, que faites-vous?",
-  option: [""],
+  option:  [
+    let choix1 = {
+        text: "Commander de la pizza",
+        action: "goToChapter("chapitre2")",
+    },
+    let choix2 = {
+        text: "Retourner se coucher",
+        action: "goToChapter("chapitre2")",
+    },
+    let choix3= {
+        text: "Décide de faire la mission tout de suite",
+        action: "goToChapter("badchoice1")",
+    }
+
+  ],
   img: "assets/cadran.jpg",
 };
+
+let badchoice1 = {
+    text: "Vous décidez de faire la mission mais malheureusement, vous tombez en bas des escaliers de votre appartment et vous vous retrouviez paralysé.",
+    img: "assets/gameover1.jpg",
+}
 
 let chapitre2 = {
   subtitle: "L'appel",
   text: "Vous recevez un appel, votre mission est de trouver professeur Crâne, et l'arrêter ou de le tuer, à vous de faire cette décision. Maintenant il faut que vous vous trouver un moyen de transport, que décidez-vous de prendre?",
-  option: [""],
-  img: "asset/phonecall.jpg",
+  option: [ let car],
+  img: "assets/phonecall.jpg",
 };
+
+let badchoice2 = {
+    text: "Vous vous décidiez de vous y rendre en voiture, mais vous vous faites arrêter par la police pour excès de vitesse",
+    img: "assest/arrest.jpg ",
+};
+
+let badchoice3 = {
+
+}
 
 let chapitre3 = {
   subtitle: "La mission",
   text: "Vous arrivez à destination. Maintenant, vous prenez connaissance aux informations de la mission et du suspect en question. Que faites-vous?",
   option: [""],
-  img: "",
+  img: "assets/car.jpg",
 };
 
 let chapitre4 = {
