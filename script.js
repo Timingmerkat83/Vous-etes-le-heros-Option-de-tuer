@@ -29,6 +29,10 @@ let chaptersObj = {
     console.log(chapitre4.subtitle, chapitre4.text);
   },
 
+  goback: function goToChapter() {
+    console.log(goback.text);
+  },
+
   badchoice4: function goToChapter() {
     console.log(badchoice4.text);
   },
@@ -174,7 +178,7 @@ let chapitre4 = {
   option: [
     (choice1 = {
       text: "Lui dire bonjour",
-      action: goToChapter(""),
+      action: goToChapter(" goback"),
     }),
     (choice2 = {
       text: "Faire à manger",
@@ -186,6 +190,11 @@ let chapitre4 = {
     }),
   ],
   img: "assets/partner.jpg",
+};
+
+let goback = {
+  text: "Billy n'a pas le temps de clavarder il vous dit de revenir plus tard. ",
+  action: goToChapter("chapitre4"),
 };
 
 let badchoice6 = {
