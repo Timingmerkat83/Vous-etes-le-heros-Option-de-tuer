@@ -75,12 +75,10 @@ let chapitre1 = {
       text: "Commander de la pizza",
       action: goToChapter("chapitre2"),
     }),
-
     (choix2 = {
       text: "Retourner se coucher",
       action: goToChapter("chapitre2"),
     }),
-
     (choix3 = {
       text: "Décide de faire la mission tout de suite",
       action: goToChapter("badchoice1"),
@@ -102,12 +100,10 @@ let chapitre2 = {
       text: "Prendre votre voiture",
       action: goToChapter("badchoice2"),
     }),
-
     (walk = {
       text: "Se rendre à pieds",
       action: goToChapter("chapitre3"),
     }),
-
     (bike = {
       text: "Se rendre en vélo",
       action: goToChapter("altpath1"),
@@ -123,7 +119,6 @@ let altpath1 = {
       text: "Oui",
       action: goToChapter("badchoice3"),
     }),
-
     (no = {
       text: "Non",
       action: goToChapter("chapitre3"),
@@ -149,17 +144,14 @@ let chapitre3 = {
       text: "Retourner chez vous",
       action: goToChapter("badchoice4"),
     }),
-
     (path2 = {
       text: "Appeller votre partenaire",
       action: goToChapter("badchoice5"),
     }),
-
     (path3 = {
       text: "Aller directement chez votre partenaire",
       action: goToChapter("chapitre4"),
     }),
-
     (path4 = {
       text: " Commencer la mission toute seule",
       action: goToChapter("ch4altpath"),
@@ -184,18 +176,36 @@ let chapitre4 = {
       text: "Lui dire bonjour",
       action: goToChapter(""),
     }),
+    (choice2 = {
+      text: "Faire à manger",
+      action: goToChapter("badchoice6"),
+    }),
+    (choice3 = {
+      text: "L'inviter à prendre un café",
+      action: goToChapter("chapitre5"),
+    }),
   ],
   img: "assets/partner.jpg",
 };
 
 let badchoice6 = {
   text: "Vous faites du spaghetti à votre partenaire mais s'étouffe et meurt",
+  img: "assets/rip.jpg",
 };
 
 let ch4altpath = {
   subtitle: "Commencer mission toute seule",
   text: "Vous commencer à regrouper des informations sur votre suspect Professeur Crâne mais vous ne savez pas où rechercher les sources nécessaires",
-  option: [""],
+  option: [
+    (addresse = {
+      text: "Vous ne trouver rien à ce sujet",
+      action: goToChapter("ch4altpath"),
+    }),
+    (profilefacebook = {
+      text: "Vous cousultez le profile Facebook du professeur Crâne, mais vous vous appercevez qu'il vous a bloqué",
+      action: goToChapter("ch4altpath"),
+    }),
+  ],
   img: "assets/computer.jpg",
 };
 
@@ -214,7 +224,6 @@ let chapitre6 = {
       text: "Tuer",
       action: goToChapter("badending"),
     }),
-
     (mercy = {
       text: "Épargner",
       action: goToChapter("goodending"),
