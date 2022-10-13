@@ -1,0 +1,63 @@
+html {
+  background-color: #363636;
+}
+
+.parent {
+  /* Avec ces commandes-ci, l'album entier est capable de rester centrer même en réagrandissant la page */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.menu {
+  background-color: #088dc6;
+  border-radius: 3px;
+  position: relative;
+  min-height: 100px;
+  width: 900px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 50px;
+  color: #036b0e;
+  text-shadow: 2px 2px #000000;
+  line-height: 35px;
+  text-transform: none;
+  text-align: center;
+  font-family: "Uncial Antiqua", cursive;
+}
+
+p {
+  text-align: left;
+}
+
+h2 {
+  text-align: center;
+}
+
+.img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btnwrap {
+  display: flex;
+  flex-direction: row;
+}
+
+#bouton {
+  margin: 10px;
+  border-color: red;
+  height: 50px;
+  width: 150px;
+  border-radius: 35%;
+  background-color: #6f0202;
+}
+
+#bouton:hover {
+  cursor: pointer;
+}
