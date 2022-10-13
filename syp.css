@@ -2,6 +2,13 @@ html {
   background-color: #363636;
 }
 
+@font-face {
+  font-family: gaming;
+  src: url("assets/font/Fineness-Pro-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .parent {
   /* Avec ces commandes-ci, l'album entier est capable de rester centrer même en réagrandissant la page */
   position: absolute;
@@ -12,12 +19,15 @@ html {
 
 .menu {
   background-color: #088dc6;
+  border-style: outset;
+  border-width: 5px;
   border-radius: 3px;
   position: relative;
   min-height: 100px;
   width: 900px;
   padding: 20px;
   margin: 0 auto;
+  box-shadow: 20px 20px 5px;
 }
 
 h1 {
@@ -31,6 +41,7 @@ h1 {
 }
 
 p {
+  font-family: gaming;
   text-align: left;
 }
 
@@ -47,14 +58,16 @@ h2 {
 .btnwrap {
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 #bouton {
+  color: aliceblue;
   margin: 10px;
   border-color: red;
+  border-radius: 20%;
   height: 50px;
-  width: 150px;
-  border-radius: 35%;
+  width: 20em;
   background-color: #6f0202;
 }
 

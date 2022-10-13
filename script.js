@@ -1,6 +1,11 @@
+let paragraphe = document.querySelector(".paragraphe .text");
+let titre = document.getElementById(".titre .text");
+
 let chaptersObj = {
   prologue: function goToChapter() {
     console.log(prologue.subtitle, "<br>", prologue.text);
+    titre.innerText = text;
+    paragraphe.innerText = text;
   },
 
   chapitre1: function goToChapter() {
@@ -67,11 +72,12 @@ let chaptersObj = {
 };
 
 let prologue = {
-  subtitle: "Option de tuer",
-  text: "Vous incarnez une jeune adulte sous le nom de Bonnie Parker," + 
-  "elle vie avec son oncle Arthur. Étant témoin du meurtre de ses parents," +  
-  "elle décidèrent de poursuivre ce que son père avait commencé," +  
-  "la recherche d'un homme planifiant de causer la mort de millions de personnes à travers le pays",
+  subtitle: "Introduction",
+  text:
+    "Vous incarnez une jeune adulte sous le nom de Bonnie Parker," +
+    "elle vie avec son oncle Arthur. Étant témoin du meurtre de ses parents," +
+    "elle décidèrent de poursuivre ce que son père avait commencé," +
+    "la recherche d'un homme planifiant de causer la mort de millions de personnes à travers le pays",
 };
 
 let chapitre1 = {
@@ -101,9 +107,10 @@ let badchoice1 = {
 
 let chapitre2 = {
   subtitle: "L'appel",
-  text: "Vous recevez un appel, votre mission est de trouver professeur Crâne," + 
-  "et l'arrêter ou de le tuer, à vous de faire cette décision." + 
-  "Maintenant il faut que vous vous trouver un moyen de transport, que décidez-vous de prendre?",
+  text:
+    "Vous recevez un appel, votre mission est de trouver professeur Crâne," +
+    "et l'arrêter ou de le tuer, à vous de faire cette décision." +
+    "Maintenant il faut que vous vous trouver un moyen de transport, que décidez-vous de prendre?",
   option: [
     (car = {
       text: "Prendre votre voiture",
@@ -170,13 +177,15 @@ let chapitre3 = {
 };
 
 let badchoice4 = {
-  text: "Vous apprenez aux nouvelles que Professeur Crâne a mis son plan en exécution." + 
-  " Un grand nombre de personnes ont dû payer le prix. Dans le plus grand des remords de n'avoir rien fait, vous vous tuer.",
+  text:
+    "Vous apprenez aux nouvelles que Professeur Crâne a mis son plan en exécution." +
+    " Un grand nombre de personnes ont dû payer le prix. Dans le plus grand des remords de n'avoir rien fait, vous vous tuer.",
 };
 
 let badchoice5 = {
-  text: "Quelqu'un a tracé votre numéro lorsque vous avez appellé" + 
-  "votre partenaire et a trouvé votre numéro d'appartement et vous kidnappe",
+  text:
+    "Quelqu'un a tracé votre numéro lorsque vous avez appellé" +
+    "votre partenaire et a trouvé votre numéro d'appartement et vous kidnappe",
 };
 
 let chapitre4 = {
