@@ -1,8 +1,9 @@
 let paragraphe = document.querySelector(".paragraphe .text");
-let titre = document.querySelector(".titre .text");
+let titre = document.querySelector(".titre");
 let btn1 = document.querySelector(".uno");
 let btn2 = document.querySelector(".dos");
 let btn3 = document.querySelector("tres");
+let StartButton = "Commencer l'histoire";
 
 let chaptersObj = {
   prologue: {
@@ -12,6 +13,12 @@ let chaptersObj = {
       "elle vie avec son oncle Arthur. Étant témoin du meurtre de ses parents," +
       "elle décidèrent de poursuivre ce que son père avait commencé," +
       "la recherche d'un homme planifiant de causer la mort de millions de personnes à travers le pays",
+    img: "assets/personnageprincipalle.jpg",
+    option: [{
+      text: StartButton,
+      action: "goToChapter('chapitre1')"
+    }]
+
   },
   chapitre1: {
     subtitle: "Le début de l'histoire",
@@ -19,14 +26,14 @@ let chaptersObj = {
     img: "assets/cadran.jpg",
     option: [{
       text: "Commander de la pizza",
-      action: goToChapter('chapitre2'),
+      action: "goToChapter('chapitre2')",
     }, {
       text: "Retourner se coucher",
-      action: goToChapter("chapitre2"),
+      action: "goToChapter('chapitre2')",
     },
     {
       text: "Décide de faire la mission tout de suite",
-      action: goToChapter("badchoice1"),
+      action: "goToChapter('badchoice1')",
     }]
   },
   badchoice1: {
@@ -43,23 +50,23 @@ let chaptersObj = {
     img: "assets/phonecall.jpg",
     option: [{
       text: "Prendre votre voiture",
-      action: goToChapter("badchoice2"),
+      action: "goToChapter('badchoice2')",
     }, {
       text: "Se rendre à pieds",
-      action: goToChapter("chapitre3"),
+      action: "goToChapter('chapitre3')",
     }, {
       text: "Se rendre en vélo",
-      action: goToChapter("altpath1"),
+      action: "goToChapter('altpath1')",
     }]
   },
   altpath1: {
     text: "Vous prenez votre vélo mais vous n'êtes pas sur de vouloir mettre un casque de protection, voulez-vous le mettre?",
     option: [{
       text: "Oui",
-      action: goToChapter("badchoice3"),
+      action: "goToChapter('badchoice3')",
     }, {
       text: "Non",
-      action: goToChapter("chapitre3"),
+      action: "goToChapter('chapitre3')",
     }]
   },
 
@@ -78,18 +85,18 @@ let chaptersObj = {
     text: "Vous arrivez à destination. Maintenant, vous prenez connaissance aux informations de la mission et du suspect en question. Que faites-vous?",
     img: "assets/car.jpg",
     option: [{
-        text: "Retourner chez vous",
-        action: goToChapter("badchoice4"),
-      }, {
-        text: "Appeller votre partenaire",
-        action: goToChapter("badchoice5"),
-      }, {
-        text: "Aller directement chez votre partenaire",
-        action: goToChapter("chapitre4"),
-      }, {
-        text: " Commencer la mission toute seule",
-        action: goToChapter("ch4altpath"),
-      }]
+      text: "Retourner chez vous",
+      action: "goToChapter('badchoice4')",
+    }, {
+      text: "Appeller votre partenaire",
+      action: "goToChapter('badchoice5')",
+    }, {
+      text: "Aller directement chez votre partenaire",
+      action: "goToChapter('chapitre4')",
+    }, {
+      text: "Commencer la mission toute seule",
+      action: "goToChapter('ch4altpath')",
+    }]
   },
 
   badchoice4: {
@@ -110,19 +117,19 @@ let chaptersObj = {
     img: "assets/partner.jpg",
     option: [{
       text: "Lui dire bonjour",
-      action: goToChapter(" goback"),
+      action: "goToChapter('goback')",
     }, {
       text: "Faire à manger",
-      action: goToChapter("badchoice6"),
+      action: "goToChapter('badchoice6')",
     }, {
       text: "L'inviter à prendre un café",
-      action: goToChapter("chapitre5"),
+      action: "goToChapter('chapitre5')",
     }]
   },
 
   goback: {
     text: "Billy n'a pas le temps de clavarder il vous dit de revenir plus tard. ",
-    action: goToChapter("chapitre4"),
+    action: "goToChapter('chapitre4')",
   },
 
   badchoice6: {
@@ -135,12 +142,12 @@ let chaptersObj = {
     text: "Vous commencer à regrouper des informations sur votre suspect Professeur Crâne mais vous ne savez pas où rechercher les sources nécessaires",
     img: "assets/computer.jpg",
     option: [{
-        text: "Vous ne trouver rien à ce sujet",
-        action: goToChapter("ch4altpath"),
-      }, {
-        text: "Vous cousultez le profile Facebook du professeur Crâne, mais vous vous appercevez qu'il vous a bloqué",
-        action: goToChapter("ch4altpath"),
-      }]
+      text: "Vous ne trouver rien à ce sujet",
+      action: "goToChapter('ch4altpath')",
+    }, {
+      text: "Vous cousultez le profile Facebook du professeur Crâne, mais vous vous appercevez qu'il vous a bloqué",
+      action: "goToChapter('ch4altpath')",
+    }]
   },
 
   chapitre5: {
@@ -149,10 +156,10 @@ let chaptersObj = {
     img: "",
     option: [{
       text: "Devant",
-      action: goToChapter("badchoice7"),
+      action: "goToChapter('badchoice7')",
     }, {
       text: "Derrière",
-      action: goToChapter("chapitre6"),
+      action: "goToChapter('chapitre6')",
     }]
   },
 
@@ -161,12 +168,12 @@ let chaptersObj = {
     text: "Vous trouvez enfin professeur Crâne, sans ses hommes, sans ses armes, sans rien. Il est sans défense. Vous pointer votre revolver contre son front. Que faites-vous?",
     img: "",
     option: [{
-        text: "Tuer",
-        action: goToChapter("badending"),
-      }, {
-        text: "Épargner",
-        action: goToChapter("goodending"),
-      }]
+      text: "Tuer",
+      action: "goToChapter('badending')",
+    }, {
+      text: "Épargner",
+      action: "goToChapter('goodending')",
+    }]
   },
 
   badending: {
@@ -178,11 +185,9 @@ let chaptersObj = {
   },
 };
 
-
-
+//Fonction permetant de naviguer à travers les chapitre via la Console Log
 
 function goToChapter(chapterName) {
-
-  console.log(chapterObj[chapterName].subtitle);
-  console.log(chapterObj[chapterName].text);
+  console.log(chaptersObj[chapterName].subtitle);
+  console.log(chaptersObj[chapterName].text);
 }
