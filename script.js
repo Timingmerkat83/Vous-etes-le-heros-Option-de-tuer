@@ -27,8 +27,7 @@ let chaptersObj = {
     {
       text: "Décide de faire la mission tout de suite",
       action: goToChapter("badchoice1"),
-    },
-    ],
+    }]
   },
   badchoice1 : {
     text: "Vous décidez de faire la mission mais malheureusement, vous tombez en bas des escaliers de votre appartment et vous vous retrouviez paralysé.",
@@ -42,20 +41,16 @@ let chaptersObj = {
     "et l'arrêter ou de le tuer, à vous de faire cette décision." +
     "Maintenant il faut que vous vous trouver un moyen de transport, que décidez-vous de prendre?",
     img: "assets/phonecall.jpg",
-    option: [
-      (car = {
+    option: [{
         text: "Prendre votre voiture",
         action: goToChapter("badchoice2"),
-      }),
-      (walk = {
+      }, {
         text: "Se rendre à pieds",
         action: goToChapter("chapitre3"),
-      }),
-      (bike = {
+      }, {
         text: "Se rendre en vélo",
         action: goToChapter("altpath1"),
-      }),
-    ],
+      }]
   },
 };
 
