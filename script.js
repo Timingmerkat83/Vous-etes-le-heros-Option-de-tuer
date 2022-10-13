@@ -19,7 +19,7 @@ let chaptersObj = {
     img: "assets/cadran.jpg",
     option: [{
       text: "Commander de la pizza",
-      action: "goToChapter('chapitre2')"
+      action: goToChapter('chapitre2'),
     }, {
       text: "Retourner se coucher",
       action: goToChapter("chapitre2"),
@@ -35,31 +35,31 @@ let chaptersObj = {
     img: "assets/gameover1.jpg",
   },
 
-};
-
-
-chapitre2 = {
-  subtitle: "L'appel",
-  text:
+  chapitre2 : {
+    subtitle: "L'appel",
+    text:
     "Vous recevez un appel, votre mission est de trouver professeur Crâne," +
     "et l'arrêter ou de le tuer, à vous de faire cette décision." +
     "Maintenant il faut que vous vous trouver un moyen de transport, que décidez-vous de prendre?",
-  option: [
-    (car = {
-      text: "Prendre votre voiture",
-      action: goToChapter("badchoice2"),
-    }),
-    (walk = {
-      text: "Se rendre à pieds",
-      action: goToChapter("chapitre3"),
-    }),
-    (bike = {
-      text: "Se rendre en vélo",
-      action: goToChapter("altpath1"),
-    }),
-  ],
-  img: "assets/phonecall.jpg",
+    img: "assets/phonecall.jpg",
+    option: [
+      (car = {
+        text: "Prendre votre voiture",
+        action: goToChapter("badchoice2"),
+      }),
+      (walk = {
+        text: "Se rendre à pieds",
+        action: goToChapter("chapitre3"),
+      }),
+      (bike = {
+        text: "Se rendre en vélo",
+        action: goToChapter("altpath1"),
+      }),
+    ],
+  },
 };
+
+
 
 altpath1 = {
   text: "Vous prenez votre vélo mais vous n'êtes pas sur de vouloir mettre un casque de protection, voulez-vous le mettre?",
