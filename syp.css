@@ -2,13 +2,6 @@ html {
   background-color: #363636;
 }
 
-@font-face {
-  font-family: gaming;
-  src: url("assets/font/Fineness-Pro-Regular.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
-
 .parent {
   /* Avec ces commandes-ci, l'album entier est capable de rester centrer même en réagrandissant la page */
   position: absolute;
@@ -25,34 +18,39 @@ html {
   position: relative;
   min-height: 100px;
   width: 900px;
-  padding: 20px;
+  padding: 10px;
   margin: 0 auto;
   box-shadow: 20px 20px 5px;
 }
 
 h1 {
-  font-size: 50px;
   color: #036b0e;
   text-shadow: 2px 2px #000000;
   line-height: 35px;
   text-transform: none;
   text-align: center;
+  font-size: 50px;
   font-family: "Uncial Antiqua", cursive;
 }
 
 p {
-  font-family: gaming;
+  font-family: "Source Sans Pro", sans-serif;
   text-align: left;
 }
 
 h2 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bolder;
   text-align: center;
 }
 
 .img {
+  width: 100%;
+  max-width: 80%;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 20px;
 }
 
 .btnwrap {
@@ -62,6 +60,7 @@ h2 {
 }
 
 #bouton {
+  font-family: "Source Sans Pro", sans-serif;
   color: aliceblue;
   margin: 10px;
   border-color: red;

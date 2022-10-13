@@ -1,37 +1,54 @@
 let paragraphe = document.querySelector(".paragraphe .text");
-let titre = document.getElementById(".titre .text");
+let titre = document.querySelector(".titre .text");
+let btn1 = document.querySelector(".uno");
+let btn2 = document.querySelector(".dos");
+let btn3 = document.querySelector("tres");
 
 let chaptersObj = {
   prologue: function goToChapter() {
     console.log(prologue.subtitle, "<br>", prologue.text);
-    titre.innerText = text;
-    paragraphe.innerText = text;
+    titre.innerText = prologue.subtitle;
+    paragraphe.innerText = prologue.text;
   },
 
   chapitre1: function goToChapter() {
     console.log(chapitre1.subtitle, chapitre1.text);
+    titre.innerText = chapitre1.subtitle;
+    paragraphe.innerText = chapitre1.text;
   },
 
   badchoice1: function goToChapter() {
     console.log(badchoice1.text);
+    titre.innerText = prologue.subtitle;
+    paragraphe.innerText = prologue.text;
   },
 
   chapitre2: function goToChapter() {
     console.log(chapitre2.subtitle, chapitre2.text);
+    titre.innerText = chapitre2.subtitle;
+    paragraphe.innerText = chapitre2.text;
   },
   badchoice2: function goToChapter() {
     console.log(badchoice2.text);
+    titre.innerText = badchoice2.subtitle;
+    paragraphe.innerText = badchoice2.text;
   },
   badchoice3: function goToChapter() {
     console.log(badchoice3.text);
+    titre.innerText = badchoice3.subtitle;
+    paragraphe.innerText = badchoice3.text;
   },
 
   chapitre3: function goToChapter() {
     console.log(chapitre3.subtitle, chapitre3.text);
+    titre.innerText = chapitre3.subtitle;
+    paragraphe.innerText = chapitre3.text;
   },
 
   chapitre4: function goToChapter() {
     console.log(chapitre4.subtitle, chapitre4.text);
+    titre.innerText = chapitre4.subtitle;
+    paragraphe.innerText = chapitre4.text;
   },
 
   goback: function goToChapter() {
