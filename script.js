@@ -153,7 +153,7 @@ let chaptersObj = {
   chapitre5: {
     subtitle: "",
     text: "Après avoir pris un bon café, vous et votre partenaire discutiez d'un plan pour infiltrer la forteresse du Professeur Crâne. Après la discussion vous vous dirigiez vers sa forteresse.",
-    img: "",
+    img: "assets/fortress.jpg",
     option: [{
       text: "Devant",
       action: "goToChapter('badchoice7')",
@@ -188,6 +188,8 @@ let chaptersObj = {
 //Fonction permetant de naviguer à travers les chapitre via la Console Log
 
 function goToChapter(chapterName) {
-  console.log(chaptersObj[chapterName].subtitle);
-  console.log(chaptersObj[chapterName].text);
+  document.write(chaptersObj[chapterName].subtitle);
+  document.write(chaptersObj[chapterName].text);
+  console.log(chaptersObj[chapterName].img);
+  document.write(chapterObj[chapterName].options);
 }
