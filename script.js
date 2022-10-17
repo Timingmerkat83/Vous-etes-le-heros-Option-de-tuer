@@ -188,8 +188,8 @@ let chaptersObj = {
 //Fonction permetant de naviguer à travers les chapitre via la Console Log
 
 function goToChapter(chapterName) {
-  document.write(chaptersObj[chapterName].subtitle);
-  document.write(chaptersObj[chapterName].text);
+  console.log(chaptersObj[chapterName].subtitle);
+  console.log(chaptersObj[chapterName].text);
   console.log(chaptersObj[chapterName].img);
-  document.write(chapterObj[chapterName].options);
+  console.log(chapterObj[chapterName].options);
 }

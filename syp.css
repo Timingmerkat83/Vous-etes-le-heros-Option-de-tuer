@@ -13,6 +13,7 @@ html {
 .menu {
   background-color: #088dc6;
   border-style: outset;
+  border-color: blue;
   border-width: 5px;
   border-radius: 3px;
   position: relative;
@@ -45,6 +46,7 @@ h2 {
 }
 
 .img {
+  border-radius: 15px;
   width: 100%;
   max-width: 80%;
   display: block;
