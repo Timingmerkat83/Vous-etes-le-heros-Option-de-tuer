@@ -186,11 +186,10 @@ let chaptersObj = {
 };
 
 //Fonction permetant de naviguer à travers les chapitre via la Console Log
-
 function goToChapter(chapterName) {
     console.log(chaptersObj[chapterName].subtitle);
     console.log(chaptersObj[chapterName].text);
-    console.log(chaptersObj[chapterName].img);
+    console.log(chaptersObj[chapterName].img.innerHTML("<img url='assets'>"));
     console.log(chaptersObj[chapterName].options);
-
+    
 };
