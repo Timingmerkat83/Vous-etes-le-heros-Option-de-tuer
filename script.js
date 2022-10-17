@@ -4,6 +4,7 @@ let btn1 = document.querySelector(".uno");
 let btn2 = document.querySelector(".dos");
 let btn3 = document.querySelector("tres");
 let StartButton = "Commencer l'histoire";
+const imgArr = img.innerHTML("<img url='assets'>");
 
 let chaptersObj = {
     prologue: {
@@ -189,7 +190,6 @@ let chaptersObj = {
 function goToChapter(chapterName) {
     console.log(chaptersObj[chapterName].subtitle);
     console.log(chaptersObj[chapterName].text);
-    console.log(chaptersObj[chapterName].img.innerHTML("<img url='assets'>"));
+    console.log(chaptersObj[chapterName].imgArr);
     console.log(chaptersObj[chapterName].options);
-    
 };
