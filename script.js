@@ -15,7 +15,7 @@ let chaptersObj = {
             "Elle devena agente pour une organisation, elle était très gafeuse mais faisait toujours du bon travail." +
             "Jusqu'à ce qu'on lui donne une mission qui pourrait tout changer, une mission qui aurait pour but de sauver plusieurs." +
             "La mission en question est de localiser Professeur Crâne, l'homme étant tenu coupable de la mort de ses parents, et de prendre la décision de le tuer ou servir la justice",
-        img: src = "assets/personnageprincipalle.jpg",
+        img: "assets/personnageprincipalle.jpg",
         option: [{
             text: StartButton,
             action: "goToChapter('chapitre1')"
@@ -189,6 +189,6 @@ let chaptersObj = {
 function goToChapter(chapterName) {
     console.log(chaptersObj[chapterName].subtitle);
     console.log(chaptersObj[chapterName].text);
-    console.log(chaptersObj[chapterName].img.innerHTML = "<img url='assets'>");
+    console.log(chaptersObj[chapterName].innerHTML = '<img url="'+ img +'" border="0"/>');
     console.log(chaptersObj[chapterName].options);
 };
