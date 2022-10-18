@@ -232,3 +232,5 @@ function goToChapter(chapterName) {
 function progress() {
   keyFounded = true;
 }
+
+function impact() {}
