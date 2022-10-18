@@ -4,6 +4,7 @@ let btn1 = document.querySelector(".uno");
 let btn2 = document.querySelector(".dos");
 let btn3 = document.querySelector("tres");
 let StartButton = "Commencer l'histoire";
+let keyFounded = false;
 
 let chaptersObj = {
   prologue: {
@@ -221,15 +222,13 @@ let chaptersObj = {
 function goToChapter(chapterName) {
   console.log(chaptersObj[chapterName].subtitle);
   console.log(chaptersObj[chapterName].text);
-  console.log(
-    (chaptersObj[chapterName].innerHTML = '<img class="img" src= />')
-  );
+  console.log((chaptersObj[chapterName].img.innerHTML = '<img src="assets"/>'));
   console.log(chaptersObj[chapterName].option);
-  for (let index = 0; index < 4; index++) {
-    const which = option[index];
-    console.log(which);
+  for (let i = 0; i < option.length; i++) {
+    console.log(option[i]);
   }
-  btn1.innerText = option[text];
-  btn2.innerText = option[text];
-  btn3.innerText = option[text];
+}
+
+function progress() {
+  keyFounded = true;
 }
