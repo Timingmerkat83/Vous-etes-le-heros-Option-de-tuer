@@ -230,6 +230,13 @@ function goToChapter(chapterName) {
   for (let i = 0; i < chaptersObj[chapterName].option.length; i++) {
     console.log(chaptersObj[chapterName].option[i]);
   }
+  document.querySelector(".titre .text").innerText =
+    chaptersObj[chapterName].subtitle;
+  document.querySelector(".paragraphe .text").innerText =
+    chaptersObj[chapterName].text;
+  document.querySelector(".img").innerText = chaptersObj[
+    chapterName
+  ].img.innerHTML = "<img src=" + chaptersObj[chapterName].img + "/>";
 }
 
 function progress() {

@@ -36,7 +36,8 @@ h1 {
 
 p {
   font-family: "Source Sans Pro", sans-serif;
-  text-align: left;
+  text-align: justify;
+  width: 75%;
 }
 
 h2 {
