@@ -222,10 +222,13 @@ let chaptersObj = {
 function goToChapter(chapterName) {
   console.log(chaptersObj[chapterName].subtitle);
   console.log(chaptersObj[chapterName].text);
-  console.log((chaptersObj[chapterName].img.innerHTML = '<img src="assets"/>'));
+  console.log(
+    (chaptersObj[chapterName].img.innerHTML =
+      "<img url=" + chaptersObj[chapterName].img + "/>")
+  );
   console.log(chaptersObj[chapterName].option);
-  for (let i = 0; i < option.length; i++) {
-    console.log(option[i]);
+  for (let i = 0; i < chaptersObj[chapterName].option.length; i++) {
+    console.log(chaptersObj[chapterName].option[i]);
   }
 }
 
