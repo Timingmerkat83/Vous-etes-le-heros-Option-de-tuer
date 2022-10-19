@@ -2,7 +2,7 @@ let paragraphe = document.querySelector(".paragraphe .text");
 let titre = document.querySelector(".titre");
 let btn1 = document.querySelector(".uno");
 let btn2 = document.querySelector(".dos");
-let btn3 = document.querySelector("tres");
+let btn3 = document.querySelector(".tres");
 let StartButton = "Commencer l'histoire";
 let keyFounded = false;
 
@@ -224,7 +224,7 @@ function goToChapter(chapterName) {
   console.log(chaptersObj[chapterName].text);
   console.log(
     (chaptersObj[chapterName].img.innerHTML =
-      "<img url=" + chaptersObj[chapterName].img + "/>")
+      "<img src=" + chaptersObj[chapterName].img + "/>")
   );
   console.log(chaptersObj[chapterName].option);
   for (let i = 0; i < chaptersObj[chapterName].option.length; i++) {
@@ -234,12 +234,19 @@ function goToChapter(chapterName) {
     chaptersObj[chapterName].subtitle;
   document.querySelector(".paragraphe .text").innerText =
     chaptersObj[chapterName].text;
-  document.querySelector(".img").innerText = chaptersObj[
+  document.getElementsByTagName("img").innerText = chaptersObj[
     chapterName
   ].img.innerHTML = "<img src=" + chaptersObj[chapterName].img + "/>";
+  //Commandes pour le bouton 1
+  btn1.innerText = chaptersObj[chapterName].option[0].text;
   btn1.onclick = chaptersObj[chapterName].option.action;
+  //Commandes pour le bouton 2
+  btn2.innerText  = chaptersObj[chapterName].option[1].text;
   btn2.onclick = chaptersObj[chapterName].option.action;
+  //Commandes pour le bouton 3
+  btn3.innerText = chaptersObj[chapterName].option[2].text;
   btn3.onclick = chaptersObj[chapterName].option.action;
+  
 }
 
 function progress() {
