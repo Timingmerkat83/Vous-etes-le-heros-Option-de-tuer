@@ -192,7 +192,6 @@ let chaptersObj = {
       },
     ],
   },
-
   chapitre6: {
     subtitle: "Le choix final",
     text: "Vous trouvez enfin professeur Crâne, sans ses hommes, sans ses armes, sans rien. Il est sans défense. Vous pointer votre revolver contre son front. Que faites-vous?",
@@ -208,11 +207,9 @@ let chaptersObj = {
       },
     ],
   },
-
   badending: {
     text: "Vous tuer Professeur Crâne pendant qu'il ricanait, et vous sauvez l'humanité. Mais votre partenaire prise en otage meurt aussi en même temps sans vous en aperçevoir.",
   },
-
   goodending: {
     text: "Vous épargnez Professeur Crâne et mettre son plan à terme, et l'emporter à la justice. Félicitations!!!",
   },
@@ -241,12 +238,11 @@ function goToChapter(chapterName) {
   btn1.innerText = chaptersObj[chapterName].option[0].text;
   btn1.onclick = chaptersObj[chapterName].option.action;
   //Commandes pour le bouton 2
-  btn2.innerText  = chaptersObj[chapterName].option[1].text;
+  btn2.innerText = chaptersObj[chapterName].option[1].text;
   btn2.onclick = chaptersObj[chapterName].option.action;
   //Commandes pour le bouton 3
   btn3.innerText = chaptersObj[chapterName].option[2].text;
   btn3.onclick = chaptersObj[chapterName].option.action;
-  
 }
 
 function progress() {
