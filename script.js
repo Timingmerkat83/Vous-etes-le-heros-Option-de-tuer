@@ -237,6 +237,9 @@ function goToChapter(chapterName) {
   document.querySelector(".img").innerText = chaptersObj[
     chapterName
   ].img.innerHTML = "<img src=" + chaptersObj[chapterName].img + "/>";
+  btn1.onclick = chaptersObj[chapterName].option.action;
+  btn2.onclick = chaptersObj[chapterName].option.action;
+  btn3.onclick = chaptersObj[chapterName].option.action;
 }
 
 function progress() {
