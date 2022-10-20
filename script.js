@@ -231,9 +231,7 @@ function goToChapter(chapterName) {
     chaptersObj[chapterName].subtitle;
   document.querySelector(".paragraphe .text").innerText =
     chaptersObj[chapterName].text;
-  document.getElementsByTagName("img").innerText = chaptersObj[
-    chapterName
-  ].img.innerHTML = "<img src=" + chaptersObj[chapterName].img + "/>";
+  document.querySelector(".img").src = chaptersObj[chapterName].img;
   //Commandes pour le bouton 1
   btn1.innerText = chaptersObj[chapterName].option[0].text;
   btn1.onclick = chaptersObj[chapterName].option.action;
