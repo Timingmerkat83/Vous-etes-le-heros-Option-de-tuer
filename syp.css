@@ -15,7 +15,7 @@ html {
   border-style: outset;
   border-color: blue;
   border-width: 5px;
-  border-radius: 3px;
+  border-radius: 10px;
   position: relative;
   min-height: 100px;
   width: 900px;
@@ -33,7 +33,7 @@ h1 {
   font-size: 50px;
   font-family: "Uncial Antiqua", cursive;
 }
-.paragraphe .text{
+.paragraphe .text {
   margin: 0 auto;
 }
 p {
