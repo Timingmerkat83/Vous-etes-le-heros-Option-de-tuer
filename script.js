@@ -236,6 +236,7 @@ function goToChapter(chapterName) {
   btn2.innerText = chaptersObj[chapterName].option[1].text;
   btn3.innerText = chaptersObj[chapterName].option[2].text;
 }
+
 //Commandes pour le bouton 1
 btn1.onclick = function goToChapter(chapterName) {
   chaptersObj[chapterName].option[0].action;
@@ -248,6 +249,7 @@ btn2.onclick = function goToChapter(chapterName) {
 btn3.onclick = function goToChapter(chapterName) {
   chaptersObj[chapterName].option[2].action;
 };
+
 function progress() {
   keyFounded = true;
   goToChapter(chapterName).option.action;

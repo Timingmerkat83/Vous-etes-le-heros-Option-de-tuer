@@ -65,9 +65,10 @@ h2 {
 }
 
 #bouton {
+  text-align: center;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 20px;
-  color: aliceblue;
+  color: chartreuse;
   margin: 10px;
   border-color: red;
   border-radius: 300px;
