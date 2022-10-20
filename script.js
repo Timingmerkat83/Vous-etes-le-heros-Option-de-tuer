@@ -232,16 +232,22 @@ function goToChapter(chapterName) {
   document.querySelector(".paragraphe .text").innerText =
     chaptersObj[chapterName].text;
   document.querySelector(".img").src = chaptersObj[chapterName].img;
-  //Commandes pour le bouton 1
   btn1.innerText = chaptersObj[chapterName].option[0].text;
-  btn1.onclick = chaptersObj[chapterName].option.action;
-  //Commandes pour le bouton 2
   btn2.innerText = chaptersObj[chapterName].option[1].text;
-  btn2.onclick = chaptersObj[chapterName].option.action;
-  //Commandes pour le bouton 3
   btn3.innerText = chaptersObj[chapterName].option[2].text;
-  btn3.onclick = chaptersObj[chapterName].option.action;
+  //Commandes pour le bouton 1
 }
+btn1.onclick = function goToChapter(chapterName) {
+  chaptersObj[chapterName].option.action;
+};
+//Commandes pour le bouton 2
+btn2.onclick = function goToChapter(chapterName) {
+  chaptersObj[chapterName].option.action;
+};
+//Commandes pour le bouton 3
+btn3.onclick = function goToChapter(chapterName) {
+  chaptersObj[chapterName].option.action;
+};
 
 function progress() {
   keyFounded = true;
