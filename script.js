@@ -249,7 +249,7 @@ btn2.onclick = function goToChapter(chapterName) {
 btn3.onclick = function goToChapter(chapterName) {
   chaptersObj[chapterName].option[2].action;
 };
-//Je vais être honnête je n'ai AUCUNE idée de faire cette partie là. Je suis débutant en fonctions javascript et j'y comprends rien
+//Je vais être honnête je n'ai AUCUNE idée de comment faire cette partie là. Je suis débutant en fonctions javascript et j'y comprends rien
 function progress() {
   keyFounded = true;
   goToChapter(chapterName).option.action;
