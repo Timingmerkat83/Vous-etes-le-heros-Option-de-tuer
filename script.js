@@ -218,25 +218,24 @@ let chaptersObj = {
 
 //Fonction permetant de naviguer à travers les chapitre via la Console Log
 function goToChapter(chapterName) {
+  let picDisplay = document.querySelector(".img");
+  let subDisplay = document.querySelector(".paragraphe .text");
+  let textDisplay = document.querySelector(".titre .text");
   let myPicture = chaptersObj[chapterName].img;
   let mySubtitle = chaptersObj[chapterName].subtitle;
   let myText = chaptersObj[chapterName].text;
   console.log(mySubtitle);
   console.log(myText);
-  console.log(
-    (myPicture.innerHTML = "<img src=" + chaptersObj[chapterName].img + "/>")
-  );
+  console.log((myPicture.innerHTML = "<img src=" + myPicture + "/>"));
   console.log(chaptersObj[chapterName].option);
 
   let optionAction;
   for (let i = 0; i < chaptersObj[chapterName].option.length; i++) {
     console.log(chaptersObj[chapterName].option[i]);
   }
-  document.querySelector(".titre .text").innerText =
-    chaptersObj[chapterName].subtitle;
-  document.querySelector(".paragraphe .text").innerText =
-    chaptersObj[chapterName].text;
-  document.querySelector(".img").src = chaptersObj[chapterName].img;
+  textDisplay.innerText = mySubtitle;
+  subDisplay.innerText = myText;
+  picDisplay.src = myPicture;
   btn1.innerText = chaptersObj[chapterName].option[0].text;
   btn2.innerText = chaptersObj[chapterName].option[1].text;
   btn3.innerText = chaptersObj[chapterName].option[2].text;
@@ -244,7 +243,9 @@ function goToChapter(chapterName) {
   //fonction vidéo
   let myVideo = chaptersObj[chapterName].video;
   function playVideo() {
-    if (chaptersObj[chapterName].video) {
+    if (myVideo) {
+      document.querySelector(".media").innerHTML =
+        "<video src" + myVideo + "/>";
     }
   }
 }
