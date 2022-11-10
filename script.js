@@ -17,7 +17,7 @@ let chaptersObj = {
       "Elle devena agente pour une organisation, elle était très gafeuse mais faisait toujours du bon travail." +
       "Jusqu'à ce qu'on lui donne une mission qui pourrait tout changer, une mission qui aurait pour but de sauver plusieurs." +
       "La mission en question est de localiser Professeur Crâne, l'homme étant tenu coupable de la mort de ses parents, et de prendre la décision de le tuer ou servir la justice",
-    img: "assets/personnageprincipalle.jpg",
+    img: "assets/img/personnageprincipalle.jpg",
     option: [
       {
         text: StartButton,
@@ -28,7 +28,7 @@ let chaptersObj = {
   chapitre1: {
     subtitle: "Le début de l'histoire",
     text: "Il est 7h30, et vous êtes confortable dans votre lit douillet. Votre alarme sonne, que faites-vous?",
-    img: "assets/cadran.jpg",
+    img: "assets/img/cadran.jpg",
     option: [
       {
         text: "Commander de la pizza",
@@ -46,7 +46,7 @@ let chaptersObj = {
   },
   badchoice1: {
     text: "Vous décidez de faire la mission mais malheureusement, vous tombez en bas des escaliers de votre appartment et vous vous retrouviez paralysé.",
-    img: "assets/gameover1.jpg",
+    img: "assets/img/gameover1.jpg",
   },
 
   chapitre2: {
@@ -55,7 +55,8 @@ let chaptersObj = {
       "Vous recevez un appel, votre mission est de trouver professeur Crâne," +
       "et l'arrêter ou de le tuer, à vous de faire cette décision." +
       "Maintenant il faut que vous vous trouver un moyen de transport, que décidez-vous de prendre?",
-    img: "assets/phonecall.jpg",
+    img: "assets/img/phonecall.jpg",
+    video: "assets/videos/phonecall.mp4",
     option: [
       {
         text: "Prendre votre voiture",
@@ -87,18 +88,18 @@ let chaptersObj = {
 
   badchoice2: {
     text: "Vous vous décidiez de vous y rendre en voiture, mais vous vous faites arrêter par la police pour excès de vitesse",
-    img: "assets/arrest.jpg ",
+    img: "assets/img/arrest.jpg ",
   },
 
   badchoice3: {
     text: "En mettant votre casque, vous vous rendez compte qu'il était trop gros et donc vous cache la vue. Donc vous vous enfargez sur un homme armé, et il vous tire dessus",
-    img: "assets/falling.jpg",
+    img: "assets/img/falling.jpg",
   },
 
   chapitre3: {
     subtitle: "La mission",
     text: "Vous arrivez à destination. Maintenant, vous prenez connaissance aux informations de la mission et du suspect en question. Que faites-vous?",
-    img: "assets/car.jpg",
+    img: "assets/img/car.jpg",
     option: [
       {
         text: "Retourner chez vous",
@@ -134,7 +135,7 @@ let chaptersObj = {
   chapitre4: {
     subtitle: "Le commencement de la mission",
     text: "Maintenant que vous et votre partenaire sont réuni, que faites-vous?",
-    img: "assets/partner.jpg",
+    img: "assets/img/partner.jpg",
     option: [
       {
         text: "Lui dire bonjour",
@@ -158,13 +159,13 @@ let chaptersObj = {
 
   badchoice6: {
     text: "Vous faites du spaghetti à votre partenaire mais s'étouffe et meurt",
-    img: "assets/rip.jpg",
+    img: "assets/img/rip.jpg",
   },
 
   ch4altpath: {
     subtitle: "Commencer mission toute seule",
     text: "Vous commencer à regrouper des informations sur votre suspect Professeur Crâne mais vous ne savez pas où rechercher les sources nécessaires",
-    img: "assets/computer.jpg",
+    img: "assets/img/computer.jpg",
     option: [
       {
         text: "Vous ne trouver rien à ce sujet",
@@ -180,7 +181,7 @@ let chaptersObj = {
   chapitre5: {
     subtitle: "",
     text: "Après avoir pris un bon café, vous et votre partenaire discutiez d'un plan pour infiltrer la forteresse du Professeur Crâne. Après la discussion vous vous dirigiez vers sa forteresse.",
-    img: "assets/fortress.jpg",
+    img: "assets/img/fortress.jpg",
     option: [
       {
         text: "Devant",
@@ -217,11 +218,13 @@ let chaptersObj = {
 
 //Fonction permetant de naviguer à travers les chapitre via la Console Log
 function goToChapter(chapterName) {
-  console.log(chaptersObj[chapterName].subtitle);
-  console.log(chaptersObj[chapterName].text);
+  let myPicture = chaptersObj[chapterName].img;
+  let mySubtitle = chaptersObj[chapterName].subtitle;
+  let myText = chaptersObj[chapterName].text;
+  console.log(mySubtitle);
+  console.log(myText);
   console.log(
-    (chaptersObj[chapterName].img.innerHTML =
-      "<img src=" + chaptersObj[chapterName].img + "/>")
+    (myPicture.innerHTML = "<img src=" + chaptersObj[chapterName].img + "/>")
   );
   console.log(chaptersObj[chapterName].option);
 
@@ -237,6 +240,13 @@ function goToChapter(chapterName) {
   btn1.innerText = chaptersObj[chapterName].option[0].text;
   btn2.innerText = chaptersObj[chapterName].option[1].text;
   btn3.innerText = chaptersObj[chapterName].option[2].text;
+
+  //fonction vidéo
+  let myVideo = chaptersObj[chapterName].video;
+  function playVideo() {
+    if (chaptersObj[chapterName].video) {
+    }
+  }
 }
 
 //Commandes pour le bouton 1
