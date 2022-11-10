@@ -224,6 +224,8 @@ function goToChapter(chapterName) {
       "<img src=" + chaptersObj[chapterName].img + "/>")
   );
   console.log(chaptersObj[chapterName].option);
+
+  let optionAction;
   for (let i = 0; i < chaptersObj[chapterName].option.length; i++) {
     console.log(chaptersObj[chapterName].option[i]);
   }
