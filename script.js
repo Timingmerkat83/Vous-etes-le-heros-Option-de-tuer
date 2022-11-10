@@ -218,9 +218,11 @@ let chaptersObj = {
 
 //Fonction permetant de naviguer à travers les chapitre via la Console Log
 function goToChapter(chapterName) {
+  //Éléments querySelector du sypnosis.html
   let picDisplay = document.querySelector(".img");
   let subDisplay = document.querySelector(".paragraphe .text");
   let textDisplay = document.querySelector(".titre .text");
+  //Contenu du tableau chaptersObj
   let myPicture = chaptersObj[chapterName].img;
   let mySubtitle = chaptersObj[chapterName].subtitle;
   let myText = chaptersObj[chapterName].text;
@@ -243,9 +245,10 @@ function goToChapter(chapterName) {
   //fonction vidéo
   let myVideo = chaptersObj[chapterName].video;
   function playVideo() {
-    if (myVideo) {
-      document.querySelector(".media").innerHTML =
-        "<video src" + myVideo + "/>";
+    if (chaptersObj[chapterName].video) {
+      console.log(picDisplay.innerHTML = "<video>" +"<source src= " + myVideo + "/>" + "</video>");
+      document.querySelector(".media").innerHTML = 
+      "<video>" +"<source src= " + myVideo + "/>" + "</video>";
     }
   }
 }
