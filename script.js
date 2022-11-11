@@ -241,8 +241,17 @@ function goToChapter(chapterName) {
   let buttonTag;
   let optionText;
   let optionAction;
-  for (let i = 0; i < chaptersObj[chapterName].option.length; i++) {
+
+  for (let i = 0; i < optionsArr.length; i++) {
     console.log(chaptersObj[chapterName].option[i]);
+    optionText = optionsArr[i].text;
+    optionAction = optionsArr[i].action;
+    buttonTag = `<button id="bouton" onclick="${optionAction}">${optionText}</button>`;
+    if (i == 0) {
+      buttonPanel.innerHTML = buttonTag;
+    } else {
+      buttonPanel.insertAdjacentHTML("beforeend", buttonTag);
+    }
   }
   textDisplay.innerText = mySubtitle;
   subDisplay.innerText = myText;
