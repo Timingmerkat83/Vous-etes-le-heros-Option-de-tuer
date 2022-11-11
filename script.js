@@ -221,32 +221,33 @@ function goToChapter(chapterName) {
   console.log(chaptersObj[chapterName].subtitle);
   console.log(chaptersObj[chapterName].text);
   console.log(chaptersObj[chapterName].option[i].text);
-  console.log((myPicture.innerHTML = "<img src=" + myPicture + "/>"));
   console.log(chaptersObj[chapterName].option);
+
   //Éléments querySelector du sypnosis.html
+
   let mediaTag;
   mediaTag = `<img src="assets/${chaptersObj[chapterName].img}" alt="" class="chapter-img">`;
 
   let chapterImgContainer = document.querySelector(".media-container");
   chapterImgContainer.innerHTML = mediaTag;
-  let subDisplay = document.querySelector(".titre .text");
-  let textDisplay = document.querySelector(".paragraphe .text");
+  let subDisplay = document.querySelector(".titre-chapitre");
+  let textDisplay = document.querySelector(".chapter-text");
   //Contenu du tableau chaptersObj
   subDisplay.innerText = chaptersObj[chapterName].subtitle;
   textDisplay.innerText = chaptersObj[chapterName].text;
 
   /**Options PS3 */
   let optionsArr = chaptersObj[chapterName].option;
-  let buttonPanel = document.querySelector(".btnwrap");
+  let buttonPanel = document.querySelector(".btn-panel");
   let buttonTag;
   let optionText;
   let optionAction;
 
-  for (let i = 0; i < optionsArr.length; i++) {
+  for (var i = 0; i < optionsArr.length; i++) {
     console.log(chaptersObj[chapterName].option[i]);
     optionText = optionsArr[i].text;
     optionAction = optionsArr[i].action;
-    buttonTag = `<button id="bouton" onclick="${optionAction}">${optionText}</button>`;
+    buttonTag = `<button id="btn" onclick="${optionAction}">${optionText}</button>`;
     if (i == 0) {
       buttonPanel.innerHTML = buttonTag;
     } else {
@@ -267,7 +268,9 @@ function goToChapter(chapterName) {
   }
 }
 
-//Commandes pour le bouton 1
+goToChapter("prologue");
+
+/* //Commandes pour le bouton 1
 btn1.onclick = function goToChapter(chapterName) {
   chaptersObj[chapterName].option[0].action;
 };
@@ -278,7 +281,8 @@ btn2.onclick = function goToChapter(chapterName) {
 //Commandes pour le bouton 3
 btn3.onclick = function goToChapter(chapterName) {
   chaptersObj[chapterName].option[2].action;
-};
+}; */
+
 //Je vais être honnête je n'ai AUCUNE idée de comment faire cette partie là. Je suis débutant en fonctions javascript et j'y comprends rien
 function progress() {
   keyFounded = true;
