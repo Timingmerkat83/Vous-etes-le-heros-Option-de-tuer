@@ -227,7 +227,6 @@ function goToChapter(chapterName) {
   let subDisplay = document.querySelector(".paragraphe .text");
   let textDisplay = document.querySelector(".titre .text");
   //Contenu du tableau chaptersObj
-  let myPicture = chaptersObj[chapterName].img;
   let mySubtitle = chaptersObj[chapterName].subtitle;
   let myText = chaptersObj[chapterName].text;
 
@@ -242,7 +241,6 @@ function goToChapter(chapterName) {
   }
   textDisplay.innerText = mySubtitle;
   subDisplay.innerText = myText;
-  mediaTag.src = myPicture;
   btn1.innerText = chaptersObj[chapterName].option[0].text;
   btn2.innerText = chaptersObj[chapterName].option[1].text;
   btn3.innerText = chaptersObj[chapterName].option[2].text;

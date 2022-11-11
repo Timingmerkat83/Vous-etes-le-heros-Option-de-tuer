@@ -2,7 +2,7 @@ html {
   background-color: #363636;
 }
 
-.parent {
+.game {
   /* Avec ces commandes-ci, l'album entier est capable de rester centrer même en réagrandissant la page */
   position: absolute;
   top: 50%;
