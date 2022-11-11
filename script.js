@@ -219,13 +219,18 @@ let chaptersObj = {
 //Fonction permetant de naviguer à travers les chapitre via la Console Log
 function goToChapter(chapterName) {
   //Éléments querySelector du sypnosis.html
-  let picDisplay = document.querySelector(".img");
+  let mediaTag;
+  mediaTag = `<img src="assets/${chaptersObj[chapterName].img}" alt="" class="chapter-img">`;
+
+  let chapterImgContainer = document.querySelector(".media-container");
+  chapterImgContainer.innerHTML = mediaTag;
   let subDisplay = document.querySelector(".paragraphe .text");
   let textDisplay = document.querySelector(".titre .text");
   //Contenu du tableau chaptersObj
   let myPicture = chaptersObj[chapterName].img;
   let mySubtitle = chaptersObj[chapterName].subtitle;
   let myText = chaptersObj[chapterName].text;
+
   console.log(mySubtitle);
   console.log(myText);
   console.log((myPicture.innerHTML = "<img src=" + myPicture + "/>"));
@@ -237,7 +242,7 @@ function goToChapter(chapterName) {
   }
   textDisplay.innerText = mySubtitle;
   subDisplay.innerText = myText;
-  picDisplay.src = myPicture;
+  mediaTag.src = myPicture;
   btn1.innerText = chaptersObj[chapterName].option[0].text;
   btn2.innerText = chaptersObj[chapterName].option[1].text;
   btn3.innerText = chaptersObj[chapterName].option[2].text;
@@ -246,9 +251,12 @@ function goToChapter(chapterName) {
   let myVideo = chaptersObj[chapterName].video;
   function playVideo() {
     if (chaptersObj[chapterName].video) {
-      console.log(picDisplay.innerHTML = "<video>" +"<source src= " + myVideo + "/>" + "</video>");
-      document.querySelector(".media").innerHTML = 
-      "<video>" +"<source src= " + myVideo + "/>" + "</video>";
+      console.log(
+        (mediaTag.innerHTML =
+          "<video>" + "<source src= " + myVideo + "/>" + "</video>")
+      );
+      document.querySelector(".media").innerHTML =
+        "<video>" + "<source src= " + myVideo + "/>" + "</video>";
     }
   }
 }
