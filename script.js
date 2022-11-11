@@ -237,7 +237,7 @@ let chaptersObj = {
   },
 
   chapitre5: {
-    subtitle: "",
+    subtitle: "C'était bon, en route maintenant!",
     text: "Après avoir pris un bon café, vous et votre partenaire discutiez d'un plan pour infiltrer la forteresse du Professeur Crâne. Après la discussion vous vous dirigiez vers sa forteresse.",
     img: "assets/img/fortress.jpg",
     option: [
@@ -266,9 +266,11 @@ let chaptersObj = {
       },
     ],
   },
+
   badending: {
     text: "Vous tuer Professeur Crâne pendant qu'il ricanait, et vous sauvez l'humanité. Mais votre partenaire prise en otage meurt aussi en même temps sans vous en aperçevoir.",
   },
+
   goodending: {
     text: "Vous épargnez Professeur Crâne et mettre son plan à terme, et l'emporter à la justice. Félicitations!!!",
   },
