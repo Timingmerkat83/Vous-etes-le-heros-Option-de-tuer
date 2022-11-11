@@ -95,6 +95,7 @@ let chaptersObj = {
   },
 
   badchoice2: {
+    subtitle: "Vous conduisez trop vite!!",
     text: "Vous vous décidiez de vous y rendre en voiture, mais vous vous faites arrêter par la police pour excès de vitesse",
     img: "assets/img/arrest.jpg ",
     option: [
@@ -106,6 +107,7 @@ let chaptersObj = {
   },
 
   badchoice3: {
+    subtitle: "Il aurait fallu un plus petit casque",
     text: "En mettant votre casque, vous vous rendez compte qu'il était trop gros et donc vous cache la vue. Donc vous vous enfargez sur un homme armé, et il vous tire dessus",
     img: "assets/img/falling.jpg",
     option: [
@@ -141,6 +143,7 @@ let chaptersObj = {
   },
 
   badchoice4: {
+    subtitle: "Perdu!!",
     text:
       "Vous apprenez aux nouvelles que Professeur Crâne a mis son plan en exécution." +
       " Un grand nombre de personnes ont dû payer le prix. Dans le plus grand des remords de n'avoir rien fait, vous vous tuer.",
@@ -153,6 +156,7 @@ let chaptersObj = {
   },
 
   badchoice5: {
+    subtitle: "Kidnappé!",
     text:
       "Quelqu'un a tracé votre numéro lorsque vous avez appellé" +
       "votre partenaire et a trouvé votre numéro d'appartement et vous kidnappe",
@@ -207,11 +211,26 @@ let chaptersObj = {
     img: "assets/img/computer.jpg",
     option: [
       {
-        text: "Vous ne trouver rien à ce sujet",
-        action: "goToChapter('ch4altpath')",
+        text: "Wikipedia",
+        action: "goToChapter('chapitre6')",
       },
       {
-        text: "Vous cousultez le profile Facebook du professeur Crâne, mais vous vous appercevez qu'il vous a bloqué",
+        text: "Profile Facebook Professeur Crâne",
+        action: "goToChapter('ch4tryagain')",
+      },
+    ],
+  },
+
+  ch4tryagain: {
+    subtitle: "Professeur Crâne vous as bloqué!!",
+    text:
+      "En recherchant de l'information sur Professeur Crâne sur son profile facebook," +
+      "vous vous rendez compte qu'il vous a bloqué en raison d'harcèlement et de spam," +
+      "car vous étiez frustré qu'il ait tué vos parents!",
+    img: "assets/img/blocked.png",
+    option: [
+      {
+        text: "Refaire une nouvelle recherche",
         action: "goToChapter('ch4altpath')",
       },
     ],
@@ -259,20 +278,21 @@ let chaptersObj = {
 function goToChapter(chapterName) {
   console.log(chaptersObj[chapterName].subtitle);
   console.log(chaptersObj[chapterName].text);
-  console.log(chaptersObj[chapterName].option[i]);
+  console.log(chaptersObj[chapterName].option[1]);
+  console.log(chaptersObj[chapterName].img);
 
   //Éléments querySelector du sypnosis.html
-
-  let mediaTag;
-  mediaTag = `<img src="assets/${chaptersObj[chapterName].img}" alt="" class="chapter-img">`;
-
-  let chapterImgContainer = document.querySelector(".media-container");
-  chapterImgContainer.innerHTML = mediaTag;
   let subDisplay = document.querySelector(".titre-chapitre");
   let textDisplay = document.querySelector(".chapter-text");
   //Contenu du tableau chaptersObj
   subDisplay.innerText = chaptersObj[chapterName].subtitle;
   textDisplay.innerText = chaptersObj[chapterName].text;
+
+  let media;
+  media = `<img src="${chaptersObj[chapterName].img}" alt="" class="chapter-img">`;
+
+  let chapterImgContainer = document.querySelector(".media-container");
+  chapterImgContainer.innerHTML = media;
 
   /**Options PS3 */
   let optionsArr = chaptersObj[chapterName].option;

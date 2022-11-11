@@ -25,7 +25,7 @@ body {
   border-color: blue;
   border-width: 5px;
   border-radius: 10px;
-  padding: 10px;
+  padding: 5px;
   box-shadow: 20px 20px 5px;
 }
 
@@ -66,7 +66,7 @@ h2 {
 .btn-panel {
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin: 25px 0;
   flex-wrap: wrap;
