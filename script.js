@@ -235,6 +235,11 @@ function goToChapter(chapterName) {
   console.log((myPicture.innerHTML = "<img src=" + myPicture + "/>"));
   console.log(chaptersObj[chapterName].option);
 
+  /**Options PS3 */
+  let optionsArr = chaptersObj[chapterName].option;
+  let buttonPanel = document.querySelector(".btnwrap");
+  let buttonTag;
+  let optionText;
   let optionAction;
   for (let i = 0; i < chaptersObj[chapterName].option.length; i++) {
     console.log(chaptersObj[chapterName].option[i]);
