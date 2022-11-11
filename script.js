@@ -45,8 +45,15 @@ let chaptersObj = {
     ],
   },
   badchoice1: {
+    subtitle: "Tombé de l'escalier... Ouch!!",
     text: "Vous décidez de faire la mission mais malheureusement, vous tombez en bas des escaliers de votre appartment et vous vous retrouviez paralysé.",
-    img: "assets/img/gameover1.jpg",
+    img: "assets/img/gameover1.png",
+    option: [
+      {
+        text: "Recommencer l'histoire",
+        action: "goToChapter('prologue')",
+      },
+    ],
   },
 
   chapitre2: {
@@ -73,6 +80,7 @@ let chaptersObj = {
     ],
   },
   altpath1: {
+    subtitle: "L'heure de rouler!!",
     text: "Vous prenez votre vélo mais vous n'êtes pas sur de vouloir mettre un casque de protection, voulez-vous le mettre?",
     option: [
       {
@@ -89,11 +97,23 @@ let chaptersObj = {
   badchoice2: {
     text: "Vous vous décidiez de vous y rendre en voiture, mais vous vous faites arrêter par la police pour excès de vitesse",
     img: "assets/img/arrest.jpg ",
+    option: [
+      {
+        text: "Recommencer l'histoire",
+        action: "goToChapter('prologue')",
+      },
+    ],
   },
 
   badchoice3: {
     text: "En mettant votre casque, vous vous rendez compte qu'il était trop gros et donc vous cache la vue. Donc vous vous enfargez sur un homme armé, et il vous tire dessus",
     img: "assets/img/falling.jpg",
+    option: [
+      {
+        text: "Recommencer l'histoire",
+        action: "goToChapter('prologue')",
+      },
+    ],
   },
 
   chapitre3: {
@@ -124,12 +144,24 @@ let chaptersObj = {
     text:
       "Vous apprenez aux nouvelles que Professeur Crâne a mis son plan en exécution." +
       " Un grand nombre de personnes ont dû payer le prix. Dans le plus grand des remords de n'avoir rien fait, vous vous tuer.",
+    option: [
+      {
+        text: "Recommencer l'histoire",
+        action: "goToChapter('prologue')",
+      },
+    ],
   },
 
   badchoice5: {
     text:
       "Quelqu'un a tracé votre numéro lorsque vous avez appellé" +
       "votre partenaire et a trouvé votre numéro d'appartement et vous kidnappe",
+    option: [
+      {
+        text: "Recommencer l'histoire",
+        action: "goToChapter('prologue')",
+      },
+    ],
   },
 
   chapitre4: {
@@ -158,8 +190,15 @@ let chaptersObj = {
   },
 
   badchoice6: {
+    subtitle: "Votre partenaire s'étouffe!!",
     text: "Vous faites du spaghetti à votre partenaire mais s'étouffe et meurt",
     img: "assets/img/rip.jpg",
+    option: [
+      {
+        text: "Recommencer l'histoire",
+        action: "goToChapter('prologue')",
+      },
+    ],
   },
 
   ch4altpath: {
@@ -220,8 +259,7 @@ let chaptersObj = {
 function goToChapter(chapterName) {
   console.log(chaptersObj[chapterName].subtitle);
   console.log(chaptersObj[chapterName].text);
-  console.log(chaptersObj[chapterName].option[i].text);
-  console.log(chaptersObj[chapterName].option);
+  console.log(chaptersObj[chapterName].option[i]);
 
   //Éléments querySelector du sypnosis.html
 
@@ -244,7 +282,6 @@ function goToChapter(chapterName) {
   let optionAction;
 
   for (var i = 0; i < optionsArr.length; i++) {
-    console.log(chaptersObj[chapterName].option[i]);
     optionText = optionsArr[i].text;
     optionAction = optionsArr[i].action;
     buttonTag = `<button id="btn" onclick="${optionAction}">${optionText}</button>`;

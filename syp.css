@@ -65,12 +65,14 @@ h2 {
 
 .btn-panel {
   display: flex;
-  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
+  margin: 25px 0;
+  flex-wrap: wrap;
 }
 
-#bouton {
+button {
   text-align: center;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 20px;
@@ -84,14 +86,11 @@ h2 {
   background-color: #6f0202;
 }
 
-#bouton:hover {
+button:hover {
   cursor: pointer;
   background-color: red;
 }
-#bouton:visited {
-  background-color: firebrick;
-}
 
-#bouton:active {
+button:active {
   background-color: crimson;
 }
