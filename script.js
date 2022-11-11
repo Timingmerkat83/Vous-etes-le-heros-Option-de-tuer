@@ -215,8 +215,12 @@ let chaptersObj = {
         action: "goToChapter('chapitre6')",
       },
       {
-        text: "Profile Facebook Professeur Crâne",
+        text: "Profile Twitter",
         action: "goToChapter('ch4tryagain')",
+      },
+      {
+        text: "Profile Facebook",
+        action: "changeStateKeyFounded()",
       },
     ],
   },
@@ -224,7 +228,7 @@ let chaptersObj = {
   ch4tryagain: {
     subtitle: "Professeur Crâne vous as bloqué!!",
     text:
-      "En recherchant de l'information sur Professeur Crâne sur son profile facebook," +
+      "En recherchant de l'information sur Professeur Crâne sur son profile Twitter," +
       "vous vous rendez compte qu'il vous a bloqué en raison d'harcèlement et de spam," +
       "car vous étiez frustré qu'il ait tué vos parents!",
     img: "assets/img/blocked.png",
@@ -232,6 +236,21 @@ let chaptersObj = {
       {
         text: "Refaire une nouvelle recherche",
         action: "goToChapter('ch4altpath')",
+      },
+    ],
+  },
+
+  ch4tryagain_key: {
+    subtitle: "Professeur Crâne envoie ses hommes vous kidnappé! Cependant...",
+    text:
+      "Vous avez accès à la page Facebook du Professeur Crâne. Sauf qu'il détecte votre présence sur son profile" +
+      "et décide d'envoyer ses hommes vous kidnapper." +
+      "Sur l'épaule du bandit, vous attrapez une clé attaché à son pantalon!",
+    img: "",
+    option: [
+      {
+        text: "Recommencer",
+        action: "goToChapter('prologue')",
       },
     ],
   },
@@ -329,23 +348,12 @@ function goToChapter(chapterName) {
 
 goToChapter("prologue");
 
-/* //Commandes pour le bouton 1
-btn1.onclick = function goToChapter(chapterName) {
-  chaptersObj[chapterName].option[0].action;
-};
-//Commandes pour le bouton 2
-btn2.onclick = function goToChapter(chapterName) {
-  chaptersObj[chapterName].option[1].action;
-};
-//Commandes pour le bouton 3
-btn3.onclick = function goToChapter(chapterName) {
-  chaptersObj[chapterName].option[2].action;
-}; */
-
 //Je vais être honnête je n'ai AUCUNE idée de comment faire cette partie là. Je suis débutant en fonctions javascript et j'y comprends rien
-function progress() {
-  keyFounded = true;
-  goToChapter(chapterName).option.action;
-}
+let keyFound = false;
+
+let changeStateKeyFounded = function () {
+  keyFound = true;
+  goToChapter("ch4tryagain_key");
+};
 
 function impact() {}
