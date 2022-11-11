@@ -218,22 +218,22 @@ let chaptersObj = {
 
 //Fonction permetant de naviguer à travers les chapitre via la Console Log
 function goToChapter(chapterName) {
+  console.log(chaptersObj[chapterName].subtitle);
+  console.log(chaptersObj[chapterName].text);
+  console.log(chaptersObj[chapterName].option[i].text);
+  console.log((myPicture.innerHTML = "<img src=" + myPicture + "/>"));
+  console.log(chaptersObj[chapterName].option);
   //Éléments querySelector du sypnosis.html
   let mediaTag;
   mediaTag = `<img src="assets/${chaptersObj[chapterName].img}" alt="" class="chapter-img">`;
 
   let chapterImgContainer = document.querySelector(".media-container");
   chapterImgContainer.innerHTML = mediaTag;
-  let subDisplay = document.querySelector(".paragraphe .text");
-  let textDisplay = document.querySelector(".titre .text");
+  let subDisplay = document.querySelector(".titre .text");
+  let textDisplay = document.querySelector(".paragraphe .text");
   //Contenu du tableau chaptersObj
-  let mySubtitle = chaptersObj[chapterName].subtitle;
-  let myText = chaptersObj[chapterName].text;
-
-  console.log(mySubtitle);
-  console.log(myText);
-  console.log((myPicture.innerHTML = "<img src=" + myPicture + "/>"));
-  console.log(chaptersObj[chapterName].option);
+  subDisplay.innerText = chaptersObj[chapterName].subtitle;
+  textDisplay.innerText = chaptersObj[chapterName].text;
 
   /**Options PS3 */
   let optionsArr = chaptersObj[chapterName].option;
@@ -253,12 +253,6 @@ function goToChapter(chapterName) {
       buttonPanel.insertAdjacentHTML("beforeend", buttonTag);
     }
   }
-  textDisplay.innerText = mySubtitle;
-  subDisplay.innerText = myText;
-  btn1.innerText = chaptersObj[chapterName].option[0].text;
-  btn2.innerText = chaptersObj[chapterName].option[1].text;
-  btn3.innerText = chaptersObj[chapterName].option[2].text;
-
   //fonction vidéo
   let myVideo = chaptersObj[chapterName].video;
   function playVideo() {
