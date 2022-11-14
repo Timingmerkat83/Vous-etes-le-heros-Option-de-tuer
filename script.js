@@ -357,3 +357,7 @@ let changeStateKeyFounded = function () {
 };
 
 function impact() {}
+
+//PS4.2 LocalStorage
+
+let gameProgress = localStorage.getItem("chaptersObj");
