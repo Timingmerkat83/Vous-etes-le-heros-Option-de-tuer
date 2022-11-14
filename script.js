@@ -321,6 +321,8 @@ function goToChapter(chapterName) {
   console.log(chaptersObj[chapterName].option[2]);
   console.log(chaptersObj[chapterName].option[3]);
   console.log(chaptersObj[chapterName].img);
+  console.log(chaptersObj[chapterName].audio);
+  console.log(chaptersObj[chapterName].video);
 
   //Éléments querySelector du sypnosis.html
   let subDisplay = document.querySelector(".titre-chapitre");
