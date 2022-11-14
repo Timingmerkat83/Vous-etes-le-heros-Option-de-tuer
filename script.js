@@ -344,6 +344,8 @@ function goToChapter(chapterName) {
         "<video>" + "<source src= " + myVideo + "/>" + "</video>";
     }
   }
+  const notif = new Audio("assets/audio/notification.mp3");
+  notif.play();
 }
 
 goToChapter("prologue");
