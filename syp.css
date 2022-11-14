@@ -69,7 +69,7 @@ h2 {
   width: 100%;
   justify-content: center;
   align-items: center;
-  margin: 25px 0;
+  margin: 10px 0;
   flex-wrap: wrap;
 }
 
@@ -78,7 +78,7 @@ button {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 20px;
   color: chartreuse;
-  margin: 10px;
+  margin: 5px;
   border-color: red;
   border-radius: 300px;
   -webkit-border-radius: 300px;
