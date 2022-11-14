@@ -11,12 +11,12 @@ let chaptersObj = {
     subtitle: "Introduction",
     text:
       "Vous incarnez une jeune adulte sous le nom de Bonnie Parker," +
-      "elle vie avec son oncle Arthur. Étant témoin du meurtre de ses parents," +
-      "elle décidèrent de poursuivre ce que son père avait commencé," +
-      "la recherche d'un homme planifiant de causer la mort de millions de personnes à travers le pays" +
-      "Elle devena agente pour une organisation, elle était très gafeuse mais faisait toujours du bon travail." +
-      "Jusqu'à ce qu'on lui donne une mission qui pourrait tout changer, une mission qui aurait pour but de sauver plusieurs." +
-      "La mission en question est de localiser Professeur Crâne, l'homme étant tenu coupable de la mort de ses parents, et de prendre la décision de le tuer ou servir la justice",
+      " elle vie avec son oncle Arthur. Étant témoin du meurtre de ses parents," +
+      " elle décide de poursuivre ce que son père avait commencé:" +
+      " la recherche d'un homme planifiant causer la mort de million de personnes à travers le pays." +
+      " Elle devient agente pour une organisation, elle est très gaffeuse mais réalise toujours du bon travail." +
+      " Jusqu'à ce qu'on lui donne une mission qui pourrait tout changer, une mission qui aurait pour but de sauver plusieurs citoyens." +
+      " La mission en question est de localiser Professeur Crâne, l'homme étant tenu responsable de la mort de ses parents, et de prendre la décision de le tuer ou servir la justice",
     img: "assets/img/personnageprincipalle.jpg",
     option: [
       {
@@ -29,6 +29,7 @@ let chaptersObj = {
     subtitle: "Le début de l'histoire",
     text: "Il est 7h30, et vous êtes confortable dans votre lit douillet. Votre alarme sonne, que faites-vous?",
     img: "assets/img/cadran.jpg",
+    audio: "assets/audio/notification.mp3",
     option: [
       {
         text: "Commander de la pizza",
@@ -46,8 +47,9 @@ let chaptersObj = {
   },
   badchoice1: {
     subtitle: "Tombé de l'escalier... Ouch!!",
-    text: "Vous décidez de faire la mission mais malheureusement, vous tombez en bas des escaliers de votre appartment et vous vous retrouviez paralysé.",
+    text: "Vous décidez de faire la mission mais malheureusement, vous tombez en bas des escaliers de votre appartement et vous vous retrouvez paralysé.",
     img: "assets/img/gameover1.png",
+    audio: "assets/audio/gameover.mp3",
     option: [
       {
         text: "Recommencer l'histoire",
@@ -64,6 +66,7 @@ let chaptersObj = {
       "Maintenant il faut que vous vous trouver un moyen de transport, que décidez-vous de prendre?",
     img: "assets/img/phonecall.jpg",
     video: "assets/videos/phonecall.mp4",
+    audio: "assets/audio/notification.mp3",
     option: [
       {
         text: "Prendre votre voiture",
@@ -98,6 +101,7 @@ let chaptersObj = {
     subtitle: "Vous conduisez trop vite!!",
     text: "Vous vous décidiez de vous y rendre en voiture, mais vous vous faites arrêter par la police pour excès de vitesse",
     img: "assets/img/arrest.jpg ",
+    audio: "assets/audio/gameover.mp3",
     option: [
       {
         text: "Recommencer l'histoire",
@@ -110,6 +114,7 @@ let chaptersObj = {
     subtitle: "Il aurait fallu un plus petit casque",
     text: "En mettant votre casque, vous vous rendez compte qu'il était trop gros et donc vous cache la vue. Donc vous vous enfargez sur un homme armé, et il vous tire dessus",
     img: "assets/img/falling.jpg",
+    audio: "assets/audio/gameover.mp3",
     option: [
       {
         text: "Recommencer l'histoire",
@@ -122,6 +127,7 @@ let chaptersObj = {
     subtitle: "La mission",
     text: "Vous arrivez à destination. Maintenant, vous prenez connaissance aux informations de la mission et du suspect en question. Que faites-vous?",
     img: "assets/img/car.jpg",
+    audio: "assets/audio/notification.mp3",
     option: [
       {
         text: "Retourner chez vous",
@@ -147,6 +153,7 @@ let chaptersObj = {
     text:
       "Vous apprenez aux nouvelles que Professeur Crâne a mis son plan en exécution." +
       " Un grand nombre de personnes ont dû payer le prix. Dans le plus grand des remords de n'avoir rien fait, vous vous tuer.",
+    audio: "assets/audio/gameover.mp3",
     option: [
       {
         text: "Recommencer l'histoire",
@@ -160,6 +167,7 @@ let chaptersObj = {
     text:
       "Quelqu'un a tracé votre numéro lorsque vous avez appellé" +
       "votre partenaire et a trouvé votre numéro d'appartement et vous kidnappe",
+    audio: "assets/audio/gameover.mp3",
     option: [
       {
         text: "Recommencer l'histoire",
@@ -172,6 +180,7 @@ let chaptersObj = {
     subtitle: "Le commencement de la mission",
     text: "Maintenant que vous et votre partenaire sont réuni, que faites-vous?",
     img: "assets/img/partner.jpg",
+    audio: "assets/audio/notification.mp3",
     option: [
       {
         text: "Lui dire bonjour",
@@ -196,6 +205,7 @@ let chaptersObj = {
   badchoice6: {
     subtitle: "Votre partenaire s'étouffe!!",
     text: "Vous faites du spaghetti à votre partenaire mais s'étouffe et meurt",
+    audio: "assets/audio/gameover.mp3",
     img: "assets/img/rip.jpg",
     option: [
       {
@@ -209,6 +219,7 @@ let chaptersObj = {
     subtitle: "Commencer mission toute seule",
     text: "Vous commencer à regrouper des informations sur votre suspect Professeur Crâne mais vous ne savez pas où rechercher les sources nécessaires",
     img: "assets/img/computer.jpg",
+    audio: "assets/audio/notification.mp3",
     option: [
       {
         text: "Wikipedia",
@@ -246,7 +257,8 @@ let chaptersObj = {
       "Vous avez accès à la page Facebook du Professeur Crâne. Sauf qu'il détecte votre présence sur son profile" +
       "et décide d'envoyer ses hommes vous kidnapper." +
       "Sur l'épaule du bandit, vous attrapez une clé attaché à son pantalon!",
-    img: "",
+    img: "assets/img/kidnapped.jpg",
+    audio: "assets/audio/gameover.mp3",
     option: [
       {
         text: "Recommencer",
@@ -259,6 +271,7 @@ let chaptersObj = {
     subtitle: "C'était bon, en route maintenant!",
     text: "Après avoir pris un bon café, vous et votre partenaire discutiez d'un plan pour infiltrer la forteresse du Professeur Crâne. Après la discussion vous vous dirigiez vers sa forteresse.",
     img: "assets/img/fortress.jpg",
+    audio: "assets/audio/notification.mp3",
     option: [
       {
         text: "Devant",
@@ -273,7 +286,8 @@ let chaptersObj = {
   chapitre6: {
     subtitle: "Le choix final",
     text: "Vous trouvez enfin professeur Crâne, sans ses hommes, sans ses armes, sans rien. Il est sans défense. Vous pointer votre revolver contre son front. Que faites-vous?",
-    img: "",
+    img: "assets/img/gunpoint.jpg",
+    audio: "assets/audio/notification.mp3",
     option: [
       {
         text: "Tuer",
@@ -287,10 +301,12 @@ let chaptersObj = {
   },
 
   badending: {
+    subtitle: "Les heures du Professeur Crâne ont été comptés",
     text: "Vous tuer Professeur Crâne pendant qu'il ricanait, et vous sauvez l'humanité. Mais votre partenaire prise en otage meurt aussi en même temps sans vous en aperçevoir.",
   },
 
   goodending: {
+    subtitle: "Professeur Crâne vie, mais derrière les barreaux.",
     text: "Vous épargnez Professeur Crâne et mettre son plan à terme, et l'emporter à la justice. Félicitations!!!",
   },
 };
@@ -300,6 +316,8 @@ function goToChapter(chapterName) {
   console.log(chaptersObj[chapterName].subtitle);
   console.log(chaptersObj[chapterName].text);
   console.log(chaptersObj[chapterName].option[1]);
+  console.log(chaptersObj[chapterName].option[2]);
+  console.log(chaptersObj[chapterName].option[3]);
   console.log(chaptersObj[chapterName].img);
 
   //Éléments querySelector du sypnosis.html
@@ -344,19 +362,15 @@ function goToChapter(chapterName) {
         "<video>" + "<source src= " + myVideo + "/>" + "</video>";
     }
   }
-  const notif = new Audio("assets/audio/notification.mp3");
-  notif.play();
 
-  const gameOver = new Audio("assets/audio/gameover.mp3");
+  //Audio PS4.1
+  let soundEffect;
+  soundEffect = `<audio src="${chaptersObj[chapterName].audio}" autoplay> `;
 
-  let badChapters = [
-    chaptersObj["badchoice1"],
-    chaptersObj["badchoice2"],
-    chaptersObj["badchoice3"],
-    chaptersObj["badchoice4"],
-    chaptersObj["badchoice5"],
-    chaptersObj["badchoice6"],
-  ];
+  let sounds = document.querySelector(".audio-container");
+  sounds.innerHTML = soundEffect;
+
+  let gameProgress = localStorage.getItem("chaptersObj");
 }
 
 goToChapter("prologue");
@@ -372,5 +386,3 @@ let changeStateKeyFounded = function () {
 function impact() {}
 
 //PS4.2 LocalStorage
-
-let gameProgress = localStorage.getItem("chaptersObj");
