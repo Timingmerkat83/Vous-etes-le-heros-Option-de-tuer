@@ -346,6 +346,17 @@ function goToChapter(chapterName) {
   }
   const notif = new Audio("assets/audio/notification.mp3");
   notif.play();
+
+  const gameOver = new Audio("assets/audio/gameover.mp3");
+
+  let badChapters = [
+    chaptersObj[badchoice1],
+    chaptersObj[badchoice2],
+    chaptersObj[badchoice3],
+    chaptersObj[badchoice4],
+    chaptersObj[badchoice5],
+    chaptersObj[badchoice6],
+  ];
 }
 
 goToChapter("prologue");
