@@ -303,11 +303,13 @@ let chaptersObj = {
   badending: {
     subtitle: "Les heures du Professeur Crâne ont été comptés",
     text: "Vous tuer Professeur Crâne pendant qu'il ricanait, et vous sauvez l'humanité. Mais votre partenaire prise en otage meurt aussi en même temps sans vous en aperçevoir.",
+    audio: "assets/audio/badEnding.mp3",
   },
 
   goodending: {
     subtitle: "Professeur Crâne vie, mais derrière les barreaux.",
     text: "Vous épargnez Professeur Crâne et mettre son plan à terme, et l'emporter à la justice. Félicitations!!!",
+    audio: "asset/audio/youWin.mp3",
   },
 };
 
