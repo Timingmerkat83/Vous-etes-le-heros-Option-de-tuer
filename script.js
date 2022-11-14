@@ -350,12 +350,12 @@ function goToChapter(chapterName) {
   const gameOver = new Audio("assets/audio/gameover.mp3");
 
   let badChapters = [
-    chaptersObj[badchoice1],
-    chaptersObj[badchoice2],
-    chaptersObj[badchoice3],
-    chaptersObj[badchoice4],
-    chaptersObj[badchoice5],
-    chaptersObj[badchoice6],
+    chaptersObj["badchoice1"],
+    chaptersObj["badchoice2"],
+    chaptersObj["badchoice3"],
+    chaptersObj["badchoice4"],
+    chaptersObj["badchoice5"],
+    chaptersObj["badchoice6"],
   ];
 }
 
