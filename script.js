@@ -283,6 +283,20 @@ let chaptersObj = {
       },
     ],
   },
+
+  badchoice7: {
+    subtitle: "Oh oh vous avez été reperé!",
+    text: "Vous passez par la porte arrière, en ouvrant la porte des goons du professeur Crâne, vous attendaient derrière la porte et vous capture.",
+    img: " ",
+    audio: "assets/audio/gameover.mp3",
+    option: [
+      {
+        text: "Recommencer",
+        action: "goToChapter('prologue')",
+      },
+    ],
+  },
+
   chapitre6: {
     subtitle: "Le choix final",
     text: "Vous trouvez enfin professeur Crâne, sans ses hommes, sans ses armes, sans rien. Il est sans défense. Vous pointer votre revolver contre son front. Que faites-vous?",
