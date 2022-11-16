@@ -326,6 +326,8 @@ let chaptersObj = {
     audio: "asset/audio/youWin.mp3",
   },
 };
+//PS4.2
+let gameProgress = localStorage.getItem("progress");
 
 //Fonction permetant de naviguer à travers les chapitre via la Console Log
 function goToChapter(chapterName) {
@@ -336,7 +338,6 @@ function goToChapter(chapterName) {
   console.log(chaptersObj[chapterName].option[3]);
   console.log(chaptersObj[chapterName].img);
   console.log(chaptersObj[chapterName].audio);
-  console.log(chaptersObj[chapterName].video);
 
   //Éléments querySelector du sypnosis.html
   let subDisplay = document.querySelector(".titre-chapitre");
@@ -368,13 +369,13 @@ function goToChapter(chapterName) {
       buttonPanel.insertAdjacentHTML("beforeend", buttonTag);
     }
   }
-  //fonction vidéo
-  let myVideo = `<video>` + `<source src="${chaptersObj[chapterName].video}" class="chapter-img">` + `</video>`;
+  //Fonction affichage vidéo vidéo PS4.1
+  const myClip = chaptersObj[chapterName].video; 
+  let myVideo = `<video src="${chaptersObj[chapterName].video}" class="chapter-img">`;
   function playVideo() {
-    if (chaptersObj[chapterName].video) {
-      console.log(
-        (chapterImgContainer.innerHTML = myVideo)
-      );
+    if (chaptersObj == myClip) {
+      console.log(myClip);
+      chapterImgContainer.innerHTML = myVideo
     } else {
       chapterImgContainer.innerHTML = media;
     }
@@ -387,8 +388,12 @@ function goToChapter(chapterName) {
   let sounds = document.querySelector(".audio-container");
   sounds.innerHTML = soundEffect;
 
-  let gameProgress = localStorage.getItem("chaptersObj");
+
+  
 }
+var localStorage = window.localStorage;
+localStorage.setItem("progress", saveState);
+const loadSaveState = localStorage.getItem("progress");
 
 goToChapter("prologue");
 
@@ -403,3 +408,4 @@ let changeStateKeyFounded = function () {
 function impact() {}
 
 //PS4.2 LocalStorage
+
