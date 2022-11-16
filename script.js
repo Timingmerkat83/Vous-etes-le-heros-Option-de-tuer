@@ -369,15 +369,14 @@ function goToChapter(chapterName) {
     }
   }
   //fonction vidéo
-  let myVideo = chaptersObj[chapterName].video;
+  let myVideo = `<video>` + `<source src="${chaptersObj[chapterName].video}" class="chapter-img">` + `</video>`;
   function playVideo() {
     if (chaptersObj[chapterName].video) {
       console.log(
-        (mediaTag.innerHTML =
-          "<video>" + "<source src= " + myVideo + "/>" + "</video>")
+        (chapterImgContainer.innerHTML = myVideo)
       );
-      document.querySelector(".media").innerHTML =
-        "<video>" + "<source src= " + myVideo + "/>" + "</video>";
+    } else {
+      chapterImgContainer.innerHTML = media;
     }
   }
 
