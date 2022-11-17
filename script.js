@@ -108,6 +108,21 @@ let chaptersObj = {
       },
       {
         text: "Non",
+        action: "goToChapter('altpath1_5')",
+      },
+    ],
+  },
+
+  altpath1_5: {
+    subtitle: "Pas de casque? Ok!!",
+    text:
+      "Sans mettre de casque, Bonnie arrive à voir où elle va sur la bicyclable en ayant conscience des dangers!!" +
+      " Sans aucune interruption, vous vous mettez en route!",
+    img: "assets/img/velosanscasque.jpg",
+    audio: "assets/audio/notification.mp3",
+    option: [
+      {
+        text: "Continuer",
         action: "goToChapter('chapitre3')",
       },
     ],
@@ -398,6 +413,7 @@ function goToChapter(chapterName) {
       buttonPanel.insertAdjacentHTML("beforeend", buttonTag);
     }
   }
+
   //Fonction affichage vidéo vidéo PS4.1
   const myClip = chaptersObj[chapterName].video;
   let myVideo = `<video src="${chaptersObj[chapterName].video}" class="chapter-img" autoplay muted loop>`;
@@ -413,6 +429,11 @@ function goToChapter(chapterName) {
   soundEffect = `<audio src="${chaptersObj[chapterName].audio}" autoplay> `;
   let sounds = document.querySelector(".audio-container");
   sounds.innerHTML = soundEffect;
+}
+
+const newGame = goToChapter("prologue");
+if (newGame != undefined) {
+  alert("Vous commencez une nouvelle partie!");
 }
 
 goToChapter("prologue");
