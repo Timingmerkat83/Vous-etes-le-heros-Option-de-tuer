@@ -11,6 +11,9 @@ body {
   justify-content: center;
   align-items: center;
 }
+aside {
+  display: block;
+}
 
 .game {
   /* Avec ces commandes-ci, l'album entier est capable de rester centrer même en réagrandissant la page */
