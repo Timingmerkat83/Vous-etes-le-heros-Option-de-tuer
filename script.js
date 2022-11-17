@@ -479,18 +479,20 @@ function goToChapter(chapterName) {
   let sounds = document.querySelector(".audio-container");
   sounds.innerHTML = soundEffect;
   //LocalStorage PS4.2
-  let saveGame = localStorage.setItem("progress", chapterName);
-  let loadGame = localStorage.getItem("progress");
+  localStorage.setItem("progress", chapterName);
+  Boolean("progress");
+  const loadGame = localStorage.getItem("progress");
 }
 
 goToChapter("prologue");
-
+goToChapter(loadGame);
 //Je vais être honnête je n'ai AUCUNE idée de comment faire cette partie là. Je suis débutant en fonctions javascript et j'y comprends rien
 let keyFounded = false;
 
 let changeStateKeyFounded = function () {
   keyFounded = true;
   goToChapter("ch4tryagain_key");
+  localStorage.setItem("key_founded", keyFounded);
 };
 
 let isKeyFounded = function () {
