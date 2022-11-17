@@ -1,11 +1,4 @@
-let paragraphe = document.querySelector(".paragraphe .text");
-let titre = document.querySelector(".titre");
-let btn1 = document.querySelector(".uno");
-let btn2 = document.querySelector(".dos");
-let btn3 = document.querySelector(".tres");
 let StartButton = "Commencer l'histoire";
-let keyFounded = false;
-
 let chaptersObj = {
   prologue: {
     subtitle: "Introduction",
@@ -262,11 +255,11 @@ let chaptersObj = {
       },
       {
         text: "Profile Facebook",
+        /*** PS3.2***/
         action: "changeStateKeyFounded()",
       },
     ],
   },
-
   ch4tryagain: {
     subtitle: "Professeur Crâne vous as bloqué!!",
     text:
@@ -281,9 +274,9 @@ let chaptersObj = {
       },
     ],
   },
-
   ch4tryagain_key: {
-    subtitle: "Professeur Crâne envoie ses hommes vous kidnappé! Cependant...",
+    subtitle:
+      "Professeur Crâne envoie ses hommes vous kidnappé! Cependant... 🔑",
     text:
       "Vous avez accès à la page Facebook du Professeur Crâne. Sauf qu'il détecte votre présence sur son profile" +
       "et décide d'envoyer ses hommes vous kidnapper." +
@@ -297,13 +290,16 @@ let chaptersObj = {
       },
     ],
   },
-
   chapitre5: {
     subtitle: "C'était bon, en route maintenant!",
     text: "Après avoir pris un bon café, vous et votre partenaire discutiez d'un plan pour infiltrer la forteresse du Professeur Crâne. Après la discussion vous vous dirigiez vers sa forteresse.",
     img: "assets/img/fortress.jpg",
     audio: "assets/audio/notification.mp3",
     option: [
+      {
+        text: "S'y rendre sur le toit en avec le vaisseau",
+        action: "goToChapter('prendre_vaisseau')",
+      },
       {
         text: "Devant",
         action: "goToChapter('badchoice7')",
@@ -314,7 +310,43 @@ let chaptersObj = {
       },
     ],
   },
-
+  prendre_vaisseau: {
+    subtitle: "Allons prendre le vaisseau!!",
+    text: "Bonnie et son partenaire vont prendre le vaisseau, mais personne ne sait si ils ont la clé pour démarrer le vaisseau",
+    img: "",
+    audio: "assets/audio/notification.mp3",
+    option: [
+      {
+        text: "Avez-vous la clé?",
+        action: "isKeyFounded('beginningObj')",
+      },
+    ],
+  },
+  arrested: {
+    subtitle: "Vous n'avez pas la clé, essayez-vous de le voler?",
+    text: "En essayant d'ouvrir la porte du vaisseau, des citoyens vous regardent, et déduisent que vous êtes suspicieuse, ils appellent la police et vous met en état d'arrestation",
+    audio: "assets/audio/notification.mp3",
+    option: [
+      {
+        text: "Recommencer",
+        action: "goToChapter('prologue')",
+      },
+    ],
+  },
+  who_is_driving: {
+    subtitle: "Parfait vous avez la clé!!",
+    text: "Vous embarquez donc, Billy et vous, dans le vaisseau, mais il reste à savoir qui va conduire ce vaisseau?",
+    option: [
+      {
+        text: "Vous",
+        action: "goToChapter('vaisseau_ecraser')",
+      },
+      {
+        text: "Billy (votre partenaire)",
+        action: "goToChapter('firstChoiceObj')",
+      },
+    ],
+  },
   badchoice7: {
     subtitle: "Oh oh vous avez été reperé!",
     text: "Vous passez par la porte arrière, en ouvrant la porte des goons du professeur Crâne, vous attendaient derrière la porte et vous capture.",
@@ -327,7 +359,6 @@ let chaptersObj = {
       },
     ],
   },
-
   chapitre6: {
     subtitle: "Le choix final",
     text: "Vous trouvez enfin professeur Crâne, sans ses hommes, sans ses armes, sans rien. Il est sans défense. Vous pointer votre revolver contre son front. Que faites-vous?",
@@ -344,7 +375,6 @@ let chaptersObj = {
       },
     ],
   },
-
   badending: {
     subtitle: "Les heures du Professeur Crâne ont été comptés",
     text: "Vous tuer Professeur Crâne pendant qu'il ricanait, et vous sauvez l'humanité. Mais votre partenaire prise en otage meurt aussi en même temps sans vous en aperçevoir.",
@@ -356,10 +386,9 @@ let chaptersObj = {
       },
     ],
   },
-
   goodending: {
     subtitle: "Professeur Crâne vie, mais derrière les barreaux.",
-    text: "Vous épargnez Professeur Crâne et mettre son plan à terme, et l'emporter à la justice. Félicitations!!!",
+    text: "Vous neutraliser Professeur Crâne et mettre son plan à terme, et l'emporter à la justice. Félicitations!!!",
     audio: "assets/audio/youWin.mp3",
     option: [
       {
@@ -446,6 +475,10 @@ let changeStateKeyFounded = function () {
   goToChapter("ch4tryagain_key");
 };
 
-function impact() {}
-
-//PS4.2 LocalStorage
+let isKeyFounded = function () {
+  if (keyFounded) {
+    goToChapter("who_is_driving");
+  } else {
+    goToChapter("arrested");
+  }
+};
