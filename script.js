@@ -340,7 +340,6 @@ function goToChapter(chapterName) {
   console.log(chaptersObj[chapterName].audio);
 
   localStorage.setItem("progress", chapterName);
-
   //Éléments querySelector du sypnosis.html
   let subDisplay = document.querySelector(".titre-chapitre");
   let textDisplay = document.querySelector(".chapter-text");
@@ -373,21 +372,20 @@ function goToChapter(chapterName) {
   }
   //Fonction affichage vidéo vidéo PS4.1
   const myClip = chaptersObj[chapterName].video;
-  let myVideo = `<video src="${chaptersObj[chapterName].video}" class="chapter-img">`;
+  let myVideo = `<video src="${chaptersObj[chapterName].video}" class="chapter-img" autoplay muted loop>`;
   if (myClip != undefined) {
     console.log(myClip);
     chapterImgContainer.innerHTML = myVideo;
   } else {
     chapterImgContainer.innerHTML = media;
   }
+
+  //Audio PS4.1
+  let soundEffect;
+  soundEffect = `<audio src="${chaptersObj[chapterName].audio}" autoplay> `;
+  let sounds = document.querySelector(".audio-container");
+  sounds.innerHTML = soundEffect;
 }
-
-//Audio PS4.1
-let soundEffect;
-soundEffect = `<audio src="${chaptersObj[chapterName].audio}" autoplay> `;
-
-let sounds = document.querySelector(".audio-container");
-sounds.innerHTML = soundEffect;
 
 goToChapter("prologue");
 
