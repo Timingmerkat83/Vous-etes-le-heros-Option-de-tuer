@@ -178,6 +178,7 @@ let chaptersObj = {
       "Vous apprenez aux nouvelles que Professeur Crâne a mis son plan en exécution." +
       " Un grand nombre de personnes ont dû payer le prix. Dans le plus grand des remords de n'avoir rien fait, vous vous tuer.",
     audio: "assets/audio/gameover.mp3",
+    img: "assets/img/badguyswon.jpg",
     option: [
       {
         text: "Recommencer l'histoire",
@@ -422,6 +423,7 @@ let chaptersObj = {
 //PS4.2
 
 //Fonction permetant de naviguer à travers les chapitre via la Console Log
+
 function goToChapter(chapterName) {
   console.log(chaptersObj[chapterName].subtitle);
   console.log(chaptersObj[chapterName].text);
@@ -430,8 +432,6 @@ function goToChapter(chapterName) {
   console.log(chaptersObj[chapterName].option[3]);
   console.log(chaptersObj[chapterName].img);
   console.log(chaptersObj[chapterName].audio);
-
-  localStorage.setItem("progress", chapterName);
   //Éléments querySelector du sypnosis.html
   let subDisplay = document.querySelector(".titre-chapitre");
   let textDisplay = document.querySelector(".chapter-text");
@@ -478,11 +478,9 @@ function goToChapter(chapterName) {
   soundEffect = `<audio src="${chaptersObj[chapterName].audio}" autoplay> `;
   let sounds = document.querySelector(".audio-container");
   sounds.innerHTML = soundEffect;
-}
-
-const newGame = goToChapter("prologue");
-if (newGame != undefined) {
-  alert("Vous commencez une nouvelle partie!");
+  //LocalStorage PS4.2
+  let saveGame = localStorage.setItem("progress", chapterName);
+  let loadGame = localStorage.getItem("progress");
 }
 
 goToChapter("prologue");
