@@ -29,11 +29,12 @@ let chaptersObj = {
     subtitle: "Le début de l'histoire",
     text: "Il est 7h30, et vous êtes confortable dans votre lit douillet. Votre alarme sonne, que faites-vous?",
     img: "assets/img/cadran.jpg",
+    video: "assets/videos/wakeup.mp4",
     audio: "assets/audio/notification.mp3",
     option: [
       {
         text: "Commander de la pizza",
-        action: "goToChapter('chapitre2')",
+        action: "goToChapter('chapitre1_5')",
       },
       {
         text: "Retourner se coucher",
@@ -42,6 +43,21 @@ let chaptersObj = {
       {
         text: "Décide de faire la mission tout de suite",
         action: "goToChapter('badchoice1')",
+      },
+    ],
+  },
+
+  chapitre1_5: {
+    subtitle: "Commander une pizza!!",
+    text:
+      "Vous commander une Pizza Large Pepperonie fromage chez Dominoes, vous la manger au complet." +
+      "Par la suite Bonnie s'en va dans sa chambre s'habillé, en mettant son pantalon, elle se rend compte qu'elle a pris du poids et arrive à peine à fermer le bouton de son pantalon," +
+      " elle préfère mettre des pantalons de jogging à la place",
+    img: "assets/img/gainweight.jpg",
+    option: [
+      {
+        text: "Continuer",
+        action: "goToChapter('chapitre2')",
       },
     ],
   },
@@ -327,7 +343,6 @@ let chaptersObj = {
   },
 };
 //PS4.2
-let gameProgress = localStorage.getItem("progress");
 
 //Fonction permetant de naviguer à travers les chapitre via la Console Log
 function goToChapter(chapterName) {
@@ -340,6 +355,7 @@ function goToChapter(chapterName) {
   console.log(chaptersObj[chapterName].audio);
 
   localStorage.setItem("progress", chapterName);
+  localStorage.getItem("progress");
   //Éléments querySelector du sypnosis.html
   let subDisplay = document.querySelector(".titre-chapitre");
   let textDisplay = document.querySelector(".chapter-text");
