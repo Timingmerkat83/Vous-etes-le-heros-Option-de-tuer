@@ -370,27 +370,23 @@ function goToChapter(chapterName) {
     }
   }
   //Fonction affichage vidéo vidéo PS4.1
-  const myClip = chaptersObj[chapterName].video; 
+  const myClip = chaptersObj[chapterName].video;
   let myVideo = `<video src="${chaptersObj[chapterName].video}" class="chapter-img">`;
-  function playVideo() {
-    if (chaptersObj == myClip) {
-      console.log(myClip);
-      chapterImgContainer.innerHTML = myVideo
-    } else {
-      chapterImgContainer.innerHTML = media;
-    }
+  if (myClip != undefined) {
+    console.log(myClip);
+    chapterImgContainer.innerHTML = myVideo;
+  } else {
+    chapterImgContainer.innerHTML = media;
   }
-
-  //Audio PS4.1
-  let soundEffect;
-  soundEffect = `<audio src="${chaptersObj[chapterName].audio}" autoplay> `;
-
-  let sounds = document.querySelector(".audio-container");
-  sounds.innerHTML = soundEffect;
-
-
-  
 }
+
+//Audio PS4.1
+let soundEffect;
+soundEffect = `<audio src="${chaptersObj[chapterName].audio}" autoplay> `;
+
+let sounds = document.querySelector(".audio-container");
+sounds.innerHTML = soundEffect;
+
 var localStorage = window.localStorage;
 localStorage.setItem("progress", saveState);
 const loadSaveState = localStorage.getItem("progress");
@@ -408,4 +404,3 @@ let changeStateKeyFounded = function () {
 function impact() {}
 
 //PS4.2 LocalStorage
-
