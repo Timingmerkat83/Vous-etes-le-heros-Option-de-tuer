@@ -276,7 +276,8 @@ let chaptersObj = {
   },
   ch4tryagain_key: {
     subtitle:
-      "Professeur Crâne envoie ses hommes vous kidnappé! Cependant... 🔑",
+      "Professeur Crâne envoie ses hommes vous kidnappé! Cependant..." +
+      "<img src='assets/img/key-icon.png'>",
     text:
       "Vous avez accès à la page Facebook du Professeur Crâne. Sauf qu'il détecte votre présence sur son profile" +
       "et décide d'envoyer ses hommes vous kidnapper." +
