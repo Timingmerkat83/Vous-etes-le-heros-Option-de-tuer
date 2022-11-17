@@ -339,6 +339,8 @@ function goToChapter(chapterName) {
   console.log(chaptersObj[chapterName].img);
   console.log(chaptersObj[chapterName].audio);
 
+  localStorage.setItem("progress", chapterName);
+
   //Éléments querySelector du sypnosis.html
   let subDisplay = document.querySelector(".titre-chapitre");
   let textDisplay = document.querySelector(".chapter-text");
@@ -386,10 +388,6 @@ soundEffect = `<audio src="${chaptersObj[chapterName].audio}" autoplay> `;
 
 let sounds = document.querySelector(".audio-container");
 sounds.innerHTML = soundEffect;
-
-var localStorage = window.localStorage;
-localStorage.setItem("progress", saveState);
-const loadSaveState = localStorage.getItem("progress");
 
 goToChapter("prologue");
 
