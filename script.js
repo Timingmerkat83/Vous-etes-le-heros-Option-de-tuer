@@ -485,7 +485,6 @@ function goToChapter(chapterName) {
 }
 
 goToChapter("prologue");
-goToChapter(loadGame);
 //Je vais être honnête je n'ai AUCUNE idée de comment faire cette partie là. Je suis débutant en fonctions javascript et j'y comprends rien
 let keyFounded = false;
 
@@ -493,8 +492,8 @@ let changeStateKeyFounded = function () {
   keyFounded = true;
   goToChapter("ch4tryagain_key");
   localStorage.setItem("key_founded", keyFounded);
+  localStorage.getItem("key_founded");
 };
-
 let isKeyFounded = function () {
   if (keyFounded) {
     goToChapter("who_is_driving");
