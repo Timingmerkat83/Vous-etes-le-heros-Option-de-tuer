@@ -351,7 +351,19 @@ let chaptersObj = {
       },
       {
         text: "Billy (votre partenaire)",
-        action: "goToChapter('firstChoiceObj')",
+        action: "goToChapter('goodending')",
+      },
+    ],
+  },
+  vaisseau_ecraser: {
+    subtitle: "Écraser",
+    text: "Bonnie ne sait pas comment piloter un vaisseau, et donc s'écrase au sol tuant plusieurs, incluant vous et votre partenaire ",
+    img: "assets/img/explosion.jpg",
+    audio: "assets/audio/gameover.mp3",
+    option: [
+      {
+        text: "Recommencer",
+        action: "goToChapter('prologue')",
       },
     ],
   },
@@ -397,6 +409,7 @@ let chaptersObj = {
   goodending: {
     subtitle: "Professeur Crâne vie, mais derrière les barreaux.",
     text: "Vous neutraliser Professeur Crâne et mettre son plan à terme, et l'emporter à la justice. Félicitations!!!",
+    img: "assets/img/goodending.jpg",
     audio: "assets/audio/youWin.mp3",
     option: [
       {
@@ -419,7 +432,6 @@ function goToChapter(chapterName) {
   console.log(chaptersObj[chapterName].audio);
 
   localStorage.setItem("progress", chapterName);
-  localStorage.getItem("progress");
   //Éléments querySelector du sypnosis.html
   let subDisplay = document.querySelector(".titre-chapitre");
   let textDisplay = document.querySelector(".chapter-text");
