@@ -222,8 +222,14 @@ let chaptersObj = {
   },
 
   goback: {
+    subtitle: "Le temps s'écoule!!",
     text: "Billy n'a pas le temps de clavarder il vous dit de revenir plus tard. ",
-    action: "goToChapter('chapitre4')",
+    option: [
+      {
+        text: "Retour",
+        action: "goToChapter('chapitre4')",
+      },
+    ],
   },
 
   badchoice6: {
@@ -276,7 +282,7 @@ let chaptersObj = {
   },
   ch4tryagain_key: {
     subtitle:
-      "Professeur Crâne envoie ses hommes vous kidnappé! Cependant..." +
+      "Professeur Crâne envoie ses hommes vous kidnappé! Cependant... 🔑" +
       "<img src='assets/img/key-icon.png'>",
     text:
       "Vous avez accès à la page Facebook du Professeur Crâne. Sauf qu'il détecte votre présence sur son profile" +
@@ -314,19 +320,20 @@ let chaptersObj = {
   prendre_vaisseau: {
     subtitle: "Allons prendre le vaisseau!!",
     text: "Bonnie et son partenaire vont prendre le vaisseau, mais personne ne sait si ils ont la clé pour démarrer le vaisseau",
-    img: "",
+    img: "assets/img/vaisseau.png",
     audio: "assets/audio/notification.mp3",
     option: [
       {
         text: "Avez-vous la clé?",
-        action: "isKeyFounded('beginningObj')",
+        action: "isKeyFounded()",
       },
     ],
   },
   arrested: {
     subtitle: "Vous n'avez pas la clé, essayez-vous de le voler?",
     text: "En essayant d'ouvrir la porte du vaisseau, des citoyens vous regardent, et déduisent que vous êtes suspicieuse, ils appellent la police et vous met en état d'arrestation",
-    audio: "assets/audio/notification.mp3",
+    img: "assets/img/arrest.jpg",
+    audio: "assets/audio/gameover.mp3",
     option: [
       {
         text: "Recommencer",
@@ -469,10 +476,10 @@ if (newGame != undefined) {
 goToChapter("prologue");
 
 //Je vais être honnête je n'ai AUCUNE idée de comment faire cette partie là. Je suis débutant en fonctions javascript et j'y comprends rien
-let keyFound = false;
+let keyFounded = false;
 
 let changeStateKeyFounded = function () {
-  keyFound = true;
+  keyFounded = true;
   goToChapter("ch4tryagain_key");
 };
 
