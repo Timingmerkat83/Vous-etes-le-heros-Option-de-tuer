@@ -23,7 +23,6 @@ let chaptersObj = {
     text: "Il est 7h30, et vous êtes confortable dans votre lit douillet. Votre alarme sonne, que faites-vous?",
     img: "assets/img/cadran.jpg",
     video: "assets/videos/wakeup.mp4",
-    audio: "assets/audio/notification.mp3",
     option: [
       {
         text: "Commander de la pizza",
@@ -75,7 +74,6 @@ let chaptersObj = {
       "Maintenant il faut que vous vous trouver un moyen de transport, que décidez-vous de prendre?",
     img: "assets/img/phonecall.jpg",
     video: "assets/videos/phonecall.mp4",
-    audio: "assets/audio/notification.mp3",
     option: [
       {
         text: "Prendre votre voiture",
@@ -112,7 +110,6 @@ let chaptersObj = {
       "Sans mettre de casque, Bonnie arrive à voir où elle va sur la bicyclable en ayant conscience des dangers!!" +
       " Sans aucune interruption, vous vous mettez en route!",
     img: "assets/img/velosanscasque.jpg",
-    audio: "assets/audio/notification.mp3",
     option: [
       {
         text: "Continuer",
@@ -151,7 +148,6 @@ let chaptersObj = {
     subtitle: "La mission",
     text: "Vous arrivez à destination. Maintenant, vous prenez connaissance aux informations de la mission et du suspect en question. Que faites-vous?",
     img: "assets/img/car.jpg",
-    audio: "assets/audio/notification.mp3",
     option: [
       {
         text: "Retourner chez vous",
@@ -205,7 +201,6 @@ let chaptersObj = {
     subtitle: "Le commencement de la mission",
     text: "Maintenant que vous et votre partenaire sont réuni, que faites-vous?",
     img: "assets/img/partner.jpg",
-    audio: "assets/audio/notification.mp3",
     option: [
       {
         text: "Lui dire bonjour",
@@ -250,7 +245,6 @@ let chaptersObj = {
     subtitle: "Commencer mission toute seule",
     text: "Vous commencer à regrouper des informations sur votre suspect Professeur Crâne mais vous ne savez pas où rechercher les sources nécessaires",
     img: "assets/img/computer.jpg",
-    audio: "assets/audio/notification.mp3",
     option: [
       {
         text: "Wikipedia",
@@ -302,7 +296,6 @@ let chaptersObj = {
     subtitle: "C'était bon, en route maintenant!",
     text: "Après avoir pris un bon café, vous et votre partenaire discutiez d'un plan pour infiltrer la forteresse du Professeur Crâne. Après la discussion vous vous dirigiez vers sa forteresse.",
     img: "assets/img/fortress.jpg",
-    audio: "assets/audio/notification.mp3",
     option: [
       {
         text: "S'y rendre sur le toit en avec le vaisseau",
@@ -322,7 +315,6 @@ let chaptersObj = {
     subtitle: "Allons prendre le vaisseau!!",
     text: "Bonnie et son partenaire vont prendre le vaisseau, mais personne ne sait si ils ont la clé pour démarrer le vaisseau",
     img: "assets/img/vaisseau.png",
-    audio: "assets/audio/notification.mp3",
     option: [
       {
         text: "Avez-vous la clé?",
@@ -384,7 +376,6 @@ let chaptersObj = {
     subtitle: "Le choix final",
     text: "Vous trouvez enfin professeur Crâne, sans ses hommes, sans ses armes, sans rien. Il est sans défense. Vous pointer votre revolver contre son front. Que faites-vous?",
     img: "assets/img/gunpoint.jpg",
-    audio: "assets/audio/notification.mp3",
     option: [
       {
         text: "Tuer",
@@ -482,6 +473,11 @@ function goToChapter(chapterName) {
   localStorage.setItem("progress", chapterName);
   Boolean("progress");
   const loadGame = localStorage.getItem("progress");
+
+  const ding = new Audio("assets/audio/notification.mp3");
+  if (chaptersObj[chapterName].audio == undefined) {
+    ding.play();
+  }
 }
 
 goToChapter("prologue");
