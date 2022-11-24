@@ -1,3 +1,14 @@
+//Exercice du PS4.2
+let savedGame = localStorage.getItem("progress");
+
+if(savedGame==null){
+  goToChapter("Introduction");
+  console.log("Introduction");
+} else {
+  goToChapter(savedGame);
+  console.log(savedGame);
+}
+
 let StartButton = "Commencer l'histoire";
 let chaptersObj = {
   prologue: {
@@ -468,13 +479,14 @@ function goToChapter(chapterName) {
   soundEffect = `<audio src="${chaptersObj[chapterName].audio}" autoplay> `;
   let sounds = document.querySelector(".audio-container");
   sounds.innerHTML = soundEffect;
+
   //LocalStorage PS4.2
   localStorage.setItem("progress", chapterName);
-  Boolean("progress");
   const loadGame = localStorage.getItem("progress");
 
   const ding = new Audio("assets/audio/notification.mp3");
   if (chaptersObj[chapterName].audio == undefined) {
+    
     ding.play();
   }
 }
@@ -483,11 +495,18 @@ goToChapter("prologue");
 //Je vais être honnête je n'ai AUCUNE idée de comment faire cette partie là. Je suis débutant en fonctions javascript et j'y comprends rien
 let keyFounded = false;
 
+let saveKey = localStorage.getItem("key_founded");
+if(savedKey==null){
+  keyFounded = false;
+}else{
+  keyFounded=Boolean(saveKey)
+}
+
 let changeStateKeyFounded = function () {
   keyFounded = true;
   goToChapter("ch4tryagain_key");
   localStorage.setItem("key_founded", keyFounded);
-  localStorage.getItem("key_founded");
+
 };
 let isKeyFounded = function () {
   if (keyFounded) {
