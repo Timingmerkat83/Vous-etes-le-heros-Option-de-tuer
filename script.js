@@ -1,13 +1,3 @@
-//Exercice du PS4.2
-let savedGame = localStorage.getItem("progress");
-
-if(savedGame==null){
-  goToChapter("Introduction");
-  console.log("Introduction");
-} else {
-  goToChapter(savedGame);
-  console.log(savedGame);
-}
 
 let StartButton = "Commencer l'histoire";
 let chaptersObj = {
@@ -491,12 +481,26 @@ function goToChapter(chapterName) {
   }
 }
 
-goToChapter("prologue");
+function reset () {
+  localStorage.removeItem("progress");
+}
+
+//Exercice du PS4.2
+let saveGame = localStorage.getItem("progress");
+
+if(saveGame==null){
+  goToChapter("prologue");
+  console.log("prologue");
+} else {
+  goToChapter(saveGame);
+  console.log(saveGame);
+}
+
 //Je vais être honnête je n'ai AUCUNE idée de comment faire cette partie là. Je suis débutant en fonctions javascript et j'y comprends rien
 let keyFounded = false;
 
 let saveKey = localStorage.getItem("key_founded");
-if(savedKey==null){
+if(saveKey==null){
   keyFounded = false;
 }else{
   keyFounded=Boolean(saveKey)
@@ -505,7 +509,7 @@ if(savedKey==null){
 let changeStateKeyFounded = function () {
   keyFounded = true;
   goToChapter("ch4tryagain_key");
-  localStorage.setItem("key_founded", keyFounded);
+  localStorage.setItem("key_founded", true);
 
 };
 let isKeyFounded = function () {
