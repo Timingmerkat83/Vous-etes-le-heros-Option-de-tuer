@@ -101,7 +101,11 @@ h2 {
   margin: 10px 0;
   flex-wrap: wrap;
 }
-
+.reset{
+  background-color: #c06d00;
+  width: 8em;
+  align-self: flex-end;
+}
 button {
   line-height: 20px;
   font-family: "Source Sans Pro", sans-serif;
@@ -125,8 +129,6 @@ button:hover {
 button:active {
   background-color: crimson;
 }
-
-
 
 .ico-key {
   display: none;
