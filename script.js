@@ -519,3 +519,6 @@ let isKeyFounded = function () {
     goToChapter("arrested");
   }
 };
+
+//PS5.1 Checkbox Audio
+let checkbox = document.getElementById("myCheck");
