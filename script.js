@@ -1,4 +1,3 @@
-
 let StartButton = "Commencer l'histoire";
 let chaptersObj = {
   prologue: {
@@ -278,7 +277,7 @@ let chaptersObj = {
   },
   ch4tryagain_key: {
     subtitle:
-      "Professeur Crâne envoie ses hommes vous kidnappé! Cependant... 🔑" ,
+      "Professeur Crâne envoie ses hommes vous kidnappé! Cependant... 🔑",
     text:
       "Vous avez accès à la page Facebook du Professeur Crâne. Sauf qu'il détecte votre présence sur son profile" +
       "et décide d'envoyer ses hommes vous kidnapper." +
@@ -476,19 +475,18 @@ function goToChapter(chapterName) {
 
   const ding = new Audio("assets/audio/notification.mp3");
   if (chaptersObj[chapterName].audio == undefined) {
-    
     ding.play();
   }
 }
 
-function reset () {
+function reset() {
   localStorage.removeItem("progress");
 }
 
 //Exercice du PS4.2
 let saveGame = localStorage.getItem("progress");
 
-if(saveGame==null){
+if (saveGame == null) {
   goToChapter("prologue");
   console.log("prologue");
 } else {
@@ -500,17 +498,16 @@ if(saveGame==null){
 let keyFounded = false;
 
 let saveKey = localStorage.getItem("key_founded");
-if(saveKey==null){
+if (saveKey == null) {
   keyFounded = false;
-}else{
-  keyFounded=Boolean(saveKey)
+} else {
+  keyFounded = Boolean(saveKey);
 }
 
 let changeStateKeyFounded = function () {
   keyFounded = true;
   goToChapter("ch4tryagain_key");
   localStorage.setItem("key_founded", true);
-
 };
 let isKeyFounded = function () {
   if (keyFounded) {
@@ -522,3 +519,5 @@ let isKeyFounded = function () {
 
 //PS5.1 Checkbox Audio
 let checkbox = document.getElementById("myCheck");
+
+let reset;
