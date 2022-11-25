@@ -479,10 +479,6 @@ function goToChapter(chapterName) {
   }
 }
 
-function reset() {
-  localStorage.removeItem("progress");
-}
-
 //Exercice du PS4.2
 let saveGame = localStorage.getItem("progress");
 
@@ -521,3 +517,10 @@ let isKeyFounded = function () {
 let checkbox = document.getElementById("myCheck");
 
 let reset;
+reset = document.querySelector(".reset");
+reset.addEventListener("click", function () {
+  alert("Votre partie a été effacé!");
+  localStorage.removeItem("progress");
+  localStorage.removeItem("key_founded");
+  goToChapter("prologue");
+});
