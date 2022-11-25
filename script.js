@@ -471,7 +471,6 @@ function goToChapter(chapterName) {
 
   //LocalStorage PS4.2
   localStorage.setItem("progress", chapterName);
-  const loadGame = localStorage.getItem("progress");
 
   const ding = new Audio("assets/audio/notification.mp3");
   if (chaptersObj[chapterName].audio == undefined) {
@@ -480,14 +479,14 @@ function goToChapter(chapterName) {
 }
 
 //Exercice du PS4.2
-let saveGame = localStorage.getItem("progress");
+let loadGame = localStorage.getItem("progress");
 
-if (saveGame == null) {
+if (loadGame == null) {
   goToChapter("prologue");
   console.log("prologue");
 } else {
-  goToChapter(saveGame);
-  console.log(saveGame);
+  goToChapter(loadGame);
+  console.log(loadGame);
 }
 
 //Je vais être honnête je n'ai AUCUNE idée de comment faire cette partie là. Je suis débutant en fonctions javascript et j'y comprends rien
@@ -515,12 +514,25 @@ let isKeyFounded = function () {
 
 //PS5.1 Checkbox Audio
 let checkbox = document.getElementById("myCheck");
+checkbox.checked = true;
+checkbox.addEventListener("click", function () {
+  if (checkbox.checked == true) {
+    console.log("Le son du jeu est activé!");
+  } else if (checkbox.checked == false) {
+    console.log("Le son du jeu est désactivé!");
+  }
+});
 
 let reset;
 reset = document.querySelector(".reset");
 reset.addEventListener("click", function () {
-  alert("Votre partie a été effacé!");
-  localStorage.removeItem("progress");
-  localStorage.removeItem("key_founded");
-  goToChapter("prologue");
+  if (loadGame == null) {
+    alert("Vous n'avez pas encore commencez une partie");
+  } else {
+    console.log("Partie effacé avec succès");
+    alert("Votre partie a été effacé!");
+    localStorage.removeItem("progress");
+    localStorage.removeItem("key_founded");
+    goToChapter("prologue");
+  }
 });
