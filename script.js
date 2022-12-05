@@ -445,6 +445,7 @@ function goToChapter(chapterName) {
   let optionAction;
 
   for (var i = 0; i < optionsArr.length; i++) {
+    console.log(optionsArr[i]);
     optionText = optionsArr[i].text;
     optionAction = optionsArr[i].action;
     buttonTag = `<button id="btn" onclick="${optionAction}">${optionText}</button>`;
@@ -485,6 +486,18 @@ function goToChapter(chapterName) {
   } else {
     Content.classList.remove("badchoice");
   }
+//PS5.1 Checkbox Audio
+let checkbox = document.getElementById("myCheck");
+checkbox.checked = true;
+checkbox.addEventListener("click", function () {
+  if (checkbox.checked == true) {
+    ding.pause();
+    console.log("Le son du jeu est activé!");
+  } else if (checkbox.checked == false) {
+    console.log("Le son du jeu est désactivé!");
+  }
+});
+/*Fin de la fonction goToChapter*/
 }
 
 //Exercice du PS4.2
@@ -510,8 +523,10 @@ if (saveKey == null) {
 
 let changeStateKeyFounded = function () {
   keyFounded = true;
+  Content.classList.add("isVisible");
   goToChapter("ch4tryagain_key");
   localStorage.setItem("key_founded", true);
+
 };
 let isKeyFounded = function () {
   if (keyFounded) {
@@ -521,16 +536,6 @@ let isKeyFounded = function () {
   }
 };
 
-//PS5.1 Checkbox Audio
-let checkbox = document.getElementById("myCheck");
-checkbox.checked = true;
-checkbox.addEventListener("click", function () {
-  if (checkbox.checked == true) {
-    console.log("Le son du jeu est activé!");
-  } else if (checkbox.checked == false) {
-    console.log("Le son du jeu est désactivé!");
-  }
-});
 
 let reset;
 reset = document.querySelector(".reset");
@@ -542,6 +547,7 @@ reset.addEventListener("click", function () {
     alert("Votre partie a été effacé!");
     localStorage.removeItem("progress");
     localStorage.removeItem("key_founded");
+    Content.classList.remove("isVisible");
     goToChapter("prologue");
   }
 });

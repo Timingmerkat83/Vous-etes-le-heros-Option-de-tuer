@@ -181,21 +181,26 @@ button:active {
 .checkbox > input:active {
   border: 2px solid #34495e;
 }
+
 .ico-key {
   display: none;
   width: 30px;
+  margin: 10px;
   align-self: start;
 }
 
-.isVisible {
+
+.isVisible .ico-key{
   display: block;
 }
 
-.game .badchoice {
+
+/*Style pour PS5.2 */
+.badchoice .game {
   background-color: rgb(240, 77, 77);
   background-image: none;
 }
 
-.content .badchoice {
+.badchoice .content  {
   background-color: red;
 }
