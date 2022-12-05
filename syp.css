@@ -82,6 +82,11 @@ h2 {
   text-align: center;
 }
 
+h3{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  margin: 5px;
+}
+
 .chapter-img {
   border-radius: 30px;
   width: 100%;
@@ -193,7 +198,6 @@ button:active {
 .isVisible .ico-key{
   display: block;
 }
-
 
 /*Style pour PS5.2 */
 .game badchoice1 {
