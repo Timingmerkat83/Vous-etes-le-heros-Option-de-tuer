@@ -1,3 +1,5 @@
+const Content = document.querySelector(".content");
+
 let StartButton = "Commencer l'histoire";
 let chaptersObj = {
   prologue: {
@@ -475,6 +477,13 @@ function goToChapter(chapterName) {
   const ding = new Audio("assets/audio/notification.mp3");
   if (chaptersObj[chapterName].audio == undefined) {
     ding.play();
+  }
+
+  if ("badchoice1" == true) {
+    console.log("La page change");
+    Content.classList.add("badchoice");
+  } else {
+    Content.classList.remove("badchoice");
   }
 }
 

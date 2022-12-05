@@ -187,3 +187,12 @@ button:active {
 .isVisible {
   display: block;
 }
+
+.game .badchoice {
+  background-color: rgb(240, 77, 77);
+  background-image: none;
+}
+
+.content .badchoice {
+  background-color: red;
+}
