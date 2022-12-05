@@ -108,10 +108,12 @@ button {
   color: chartreuse;
   margin: 5px;
   border-color: red;
+  border-width: 5px;
   border-radius: 300px;
   -webkit-border-radius: 300px;
   padding: 10px;
   height: 60px;
+  transition: 0.5s;
   width: 10em;
   background-color: #6f0202;
 }
@@ -122,6 +124,7 @@ button:hover {
 }
 
 button:active {
+  border-style: inset;
   background-color: crimson;
 }
 .checkbox {
