@@ -201,15 +201,17 @@ button:active {
 
 /*Style pour PS5.2 */
 .badchoice1 .game {
+  transition: 0.5s;
   background-color: rgb(240, 77, 77);
 }
 
 .badchoice1 .content::before {
+  transition: 0.5s;
   background-color: red;
   background-image: none;
 }
 
 .badchoice2 .content::before {
-  background-image: url("");
+  background-image: url("assets/img/Gif/police-lights.gif");
 }
 
