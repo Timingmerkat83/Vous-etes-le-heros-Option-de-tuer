@@ -160,7 +160,7 @@ let chaptersObj = {
         action: "goToChapter('badchoice5')",
       },
       {
-        text: "Aller directement chez votre partenaire",
+        text: "Direction votre partenaire",
         action: "goToChapter('chapitre4')",
       },
       {
@@ -432,8 +432,8 @@ function goToChapter(chapterName) {
   textDisplay.innerText = chaptersObj[chapterName].text;
 
   //Exercice PS5.2
-  let body = document.querySelector("body");
-  body.getAttribute("class", [chapterName]);
+  document.body.className = "";
+  document.body.classList.add(chapterName);
 
   let media;
   media = `<img src="${chaptersObj[chapterName].img}" alt="" class="chapter-img">`;
