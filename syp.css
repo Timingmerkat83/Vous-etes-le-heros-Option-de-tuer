@@ -196,11 +196,12 @@ button:active {
 
 
 /*Style pour PS5.2 */
-.badchoice .game {
+.game badchoice1 {
   background-color: rgb(240, 77, 77);
+}
+
+.content badchoice1 {
+  background-color: red;
   background-image: none;
 }
 
-.badchoice .content  {
-  background-color: red;
-}

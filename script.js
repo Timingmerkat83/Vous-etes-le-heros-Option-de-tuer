@@ -431,6 +431,10 @@ function goToChapter(chapterName) {
   subDisplay.innerText = chaptersObj[chapterName].subtitle;
   textDisplay.innerText = chaptersObj[chapterName].text;
 
+  //Exercice PS5.2
+  let body = document.querySelector("body");
+  body.getAttribute("class", [chapterName]);
+
   let media;
   media = `<img src="${chaptersObj[chapterName].img}" alt="" class="chapter-img">`;
 
@@ -480,24 +484,18 @@ function goToChapter(chapterName) {
     ding.play();
   }
 
-  if ("badchoice1" == true) {
-    console.log("La page change");
-    Content.classList.add("badchoice");
-  } else {
-    Content.classList.remove("badchoice");
-  }
-//PS5.1 Checkbox Audio
-let checkbox = document.getElementById("myCheck");
-checkbox.checked = true;
-checkbox.addEventListener("click", function () {
-  if (checkbox.checked == true) {
-    ding.pause();
-    console.log("Le son du jeu est activé!");
-  } else if (checkbox.checked == false) {
-    console.log("Le son du jeu est désactivé!");
-  }
-});
-/*Fin de la fonction goToChapter*/
+  //PS5.1 Checkbox Audio
+  let checkbox = document.getElementById("myCheck");
+  checkbox.checked = true;
+  checkbox.addEventListener("click", function () {
+    if (checkbox.checked == true) {
+      ding.pause();
+      console.log("Le son du jeu est activé!");
+    } else if (checkbox.checked == false) {
+      console.log("Le son du jeu est désactivé!");
+    }
+  });
+  /*Fin de la fonction goToChapter*/
 }
 
 //Exercice du PS4.2
@@ -526,7 +524,6 @@ let changeStateKeyFounded = function () {
   Content.classList.add("isVisible");
   goToChapter("ch4tryagain_key");
   localStorage.setItem("key_founded", true);
-
 };
 let isKeyFounded = function () {
   if (keyFounded) {
@@ -535,7 +532,6 @@ let isKeyFounded = function () {
     goToChapter("arrested");
   }
 };
-
 
 let reset;
 reset = document.querySelector(".reset");
