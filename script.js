@@ -35,7 +35,7 @@ let chaptersObj = {
         action: "goToChapter('chapitre2')",
       },
       {
-        text: "Décide de faire la mission tout de suite",
+        text: "Faire la mission tout de suite",
         action: "goToChapter('badchoice1')",
       },
     ],

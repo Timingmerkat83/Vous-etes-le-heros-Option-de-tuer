@@ -46,7 +46,7 @@ aside {
   align-items: center;
   overflow: auto;
   background-color: #088dc6;
-  width: 800px;
+  width: 900px;
   min-height: 100px;
   border-style: outset;
   border-color: blue;
@@ -198,6 +198,17 @@ button:active {
   display: none;
 }
 
+.BonneFin {
+  display: none;
+  float: right;
+}
+
+.MauvaiseFin {
+  width: 200px;
+  margin: 20px;
+  display: none;
+}
+
 /*La style de la clé qui apparait lorsque l'utilisateur a trouvé la clé*/
 
 .ico-key {
@@ -287,12 +298,6 @@ button:active {
   background-image: url("assets/img/Gif/police-lights.gif");
 }
 
-.goodending .no1 {
-  display: block;
-  border-color: red;
-  background-color: rgb(240, 77, 77);
-}
-
 .badchoice3 h1 {
   transition: 0.5s;
   color: pink;
@@ -338,10 +343,19 @@ button:active {
   background-image: none;
 }
 
-.badchoice2 .content::before {
+.badchoice2,
+.arrested .content::before {
   background-image: url("assets/img/Gif/police-lights.gif");
 }
 
 .goodending .no1 {
+  display: block;
+}
+
+.goodending .BonneFin {
+  display: block;
+}
+
+.badending .MauvaiseFin {
   display: block;
 }
