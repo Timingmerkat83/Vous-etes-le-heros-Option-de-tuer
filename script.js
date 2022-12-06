@@ -484,9 +484,6 @@ function goToChapter(chapterName) {
     ding.play();
   }
 
-<<<<<<< HEAD
-  badchoice1 = classList.add("badchoice");
-=======
   //PS5.1 Checkbox Audio
   let checkbox = document.getElementById("myCheck");
   checkbox.checked = true;
@@ -499,7 +496,6 @@ function goToChapter(chapterName) {
     }
   });
   /*Fin de la fonction goToChapter*/
->>>>>>> e6d692d3a564e821e2e8080d0b61fb1d7bded395
 }
 
 //Exercice du PS4.2
@@ -547,10 +543,6 @@ reset.addEventListener("click", function () {
     alert("Votre partie a été effacé!");
     localStorage.removeItem("progress");
     localStorage.removeItem("key_founded");
-<<<<<<< HEAD
-    //Image de la clé apparait
-=======
->>>>>>> e6d692d3a564e821e2e8080d0b61fb1d7bded395
     Content.classList.remove("isVisible");
     goToChapter("prologue");
   }

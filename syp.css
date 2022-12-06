@@ -82,8 +82,8 @@ h2 {
   text-align: center;
 }
 
-h3{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+h3 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 5px;
 }
 
@@ -191,16 +191,13 @@ button:active {
   border: 2px solid #34495e;
 }
 
-<<<<<<< HEAD
-=======
-.no1{
+.no1 {
   position: absolute;
   top: 100px;
   width: 90px;
   display: none;
 }
 
->>>>>>> e6d692d3a564e821e2e8080d0b61fb1d7bded395
 /*La style de la clé qui apparait lorsque l'utilisateur a trouvé la clé*/
 
 .ico-key {
@@ -210,12 +207,7 @@ button:active {
   align-self: start;
 }
 
-<<<<<<< HEAD
 .isVisible .ico-key {
-=======
-
-.isVisible .ico-key{
->>>>>>> e6d692d3a564e821e2e8080d0b61fb1d7bded395
   display: block;
 }
 
@@ -223,19 +215,14 @@ button:active {
 .badchoice1 .game {
   transition: 0.5s;
   border-style: outset;
-<<<<<<< HEAD
   border-color: red;
   background-color: rgb(240, 77, 77);
 }
 .badchoice1 h1 {
-=======
-  border-color:red;
-  background-color: rgb(240, 77, 77);
-}
-.badchoice1 h1{
->>>>>>> e6d692d3a564e821e2e8080d0b61fb1d7bded395
+  border-color: red;
   transition: 0.5s;
   color: pink;
+  background-color: rgb(240, 77, 77);
 }
 
 .badchoice1 .content::before {
@@ -247,10 +234,10 @@ button:active {
 .badchoice3 .game {
   transition: 0.5s;
   border-style: outset;
-<<<<<<< HEAD
   border-color: red;
   background-color: rgb(240, 77, 77);
 }
+
 .badchoice3 h1 {
   transition: 0.5s;
   color: pink;
@@ -302,12 +289,11 @@ button:active {
 
 .goodending .no1 {
   display: block;
-=======
-  border-color:red;
+  border-color: red;
   background-color: rgb(240, 77, 77);
->>>>>>> e6d692d3a564e821e2e8080d0b61fb1d7bded395
 }
-.badchoice3 h1{
+
+.badchoice3 h1 {
   transition: 0.5s;
   color: pink;
 }
@@ -321,10 +307,10 @@ button:active {
 .badchoice4 .game {
   transition: 0.5s;
   border-style: outset;
-  border-color:red;
+  border-color: red;
   background-color: rgb(240, 77, 77);
 }
-.badchoice4 h1{
+.badchoice4 h1 {
   transition: 0.5s;
   color: pink;
 }
@@ -338,10 +324,10 @@ button:active {
 .badchoice5 .game {
   transition: 0.5s;
   border-style: outset;
-  border-color:red;
+  border-color: red;
   background-color: rgb(240, 77, 77);
 }
-.badchoice5 h1{
+.badchoice5 h1 {
   transition: 0.5s;
   color: pink;
 }
@@ -352,12 +338,10 @@ button:active {
   background-image: none;
 }
 
-
 .badchoice2 .content::before {
   background-image: url("assets/img/Gif/police-lights.gif");
 }
 
-.goodending .no1{
+.goodending .no1 {
   display: block;
 }
-
