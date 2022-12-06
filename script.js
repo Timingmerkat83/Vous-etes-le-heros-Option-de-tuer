@@ -419,11 +419,10 @@ let chaptersObj = {
 function goToChapter(chapterName) {
   console.log(chaptersObj[chapterName].subtitle);
   console.log(chaptersObj[chapterName].text);
-  console.log(chaptersObj[chapterName].option[1]);
-  console.log(chaptersObj[chapterName].option[2]);
-  console.log(chaptersObj[chapterName].option[3]);
+  console.log(chaptersObj[chapterName].option[i]);
   console.log(chaptersObj[chapterName].img);
   console.log(chaptersObj[chapterName].audio);
+  console.log(chaptersObj[chapterName]);
   //Éléments querySelector du sypnosis.html
   let subDisplay = document.querySelector(".titre-chapitre");
   let textDisplay = document.querySelector(".chapter-text");
