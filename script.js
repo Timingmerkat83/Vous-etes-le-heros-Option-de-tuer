@@ -160,7 +160,7 @@ let chaptersObj = {
         action: "goToChapter('badchoice5')",
       },
       {
-        text: "Aller directement chez votre partenaire",
+        text: "Direction votre partenaire",
         action: "goToChapter('chapitre4')",
       },
       {
@@ -431,6 +431,10 @@ function goToChapter(chapterName) {
   subDisplay.innerText = chaptersObj[chapterName].subtitle;
   textDisplay.innerText = chaptersObj[chapterName].text;
 
+  //Exercice PS5.2
+  document.body.className = "";
+  document.body.classList.add(chapterName);
+
   let media;
   media = `<img src="${chaptersObj[chapterName].img}" alt="" class="chapter-img">`;
 
@@ -445,6 +449,7 @@ function goToChapter(chapterName) {
   let optionAction;
 
   for (var i = 0; i < optionsArr.length; i++) {
+    console.log(optionsArr[i]);
     optionText = optionsArr[i].text;
     optionAction = optionsArr[i].action;
     buttonTag = `<button id="btn" onclick="${optionAction}">${optionText}</button>`;
@@ -479,12 +484,22 @@ function goToChapter(chapterName) {
     ding.play();
   }
 
-  if ("badchoice1" == true) {
-    console.log("La page change");
-    Content.classList.add("badchoice");
-  } else {
-    Content.classList.remove("badchoice");
-  }
+<<<<<<< HEAD
+  badchoice1 = classList.add("badchoice");
+=======
+  //PS5.1 Checkbox Audio
+  let checkbox = document.getElementById("myCheck");
+  checkbox.checked = true;
+  checkbox.addEventListener("click", function () {
+    if (checkbox.checked == true) {
+      ding.pause();
+      console.log("Le son du jeu est activé!");
+    } else if (checkbox.checked == false) {
+      console.log("Le son du jeu est désactivé!");
+    }
+  });
+  /*Fin de la fonction goToChapter*/
+>>>>>>> e6d692d3a564e821e2e8080d0b61fb1d7bded395
 }
 
 //Exercice du PS4.2
@@ -510,6 +525,7 @@ if (saveKey == null) {
 
 let changeStateKeyFounded = function () {
   keyFounded = true;
+  Content.classList.add("isVisible");
   goToChapter("ch4tryagain_key");
   localStorage.setItem("key_founded", true);
 };
@@ -521,17 +537,6 @@ let isKeyFounded = function () {
   }
 };
 
-//PS5.1 Checkbox Audio
-let checkbox = document.getElementById("myCheck");
-checkbox.checked = true;
-checkbox.addEventListener("click", function () {
-  if (checkbox.checked == true) {
-    console.log("Le son du jeu est activé!");
-  } else if (checkbox.checked == false) {
-    console.log("Le son du jeu est désactivé!");
-  }
-});
-
 let reset;
 reset = document.querySelector(".reset");
 reset.addEventListener("click", function () {
@@ -542,6 +547,11 @@ reset.addEventListener("click", function () {
     alert("Votre partie a été effacé!");
     localStorage.removeItem("progress");
     localStorage.removeItem("key_founded");
+<<<<<<< HEAD
+    //Image de la clé apparait
+=======
+>>>>>>> e6d692d3a564e821e2e8080d0b61fb1d7bded395
+    Content.classList.remove("isVisible");
     goToChapter("prologue");
   }
 });
