@@ -47,7 +47,7 @@ aside {
   overflow: auto;
   background-color: #088dc6;
   width: 900px;
-  min-height: 100px;
+  min-height: 75px;
   border-style: outset;
   border-color: blue;
   border-width: 5px;
