@@ -338,6 +338,7 @@ let chaptersObj = {
   who_is_driving: {
     subtitle: "Parfait vous avez la clé!!",
     text: "Vous embarquez donc, Billy et vous, dans le vaisseau, mais il reste à savoir qui va conduire ce vaisseau?",
+    img: "assets/img/whoisdriving.jpg",
     option: [
       {
         text: "Vous",
@@ -364,7 +365,7 @@ let chaptersObj = {
   badchoice7: {
     subtitle: "Oh oh vous avez été reperé!",
     text: "Vous passez par la porte arrière, en ouvrant la porte des goons du professeur Crâne, vous attendaient derrière la porte et vous capture.",
-    img: " ",
+    img: "assets/img/ohnooops.jpeg ",
     audio: "assets/audio/gameover.mp3",
     option: [
       {
@@ -391,6 +392,7 @@ let chaptersObj = {
   badending: {
     subtitle: "Les heures du Professeur Crâne ont été comptés",
     text: "Vous tuer Professeur Crâne pendant qu'il ricanait, et vous sauvez l'humanité. Mais votre partenaire prise en otage meurt aussi en même temps sans vous en aperçevoir.",
+    img: "assets/img/womangrave.jpg",
     audio: "assets/audio/badEnding.mp3",
     option: [
       {
