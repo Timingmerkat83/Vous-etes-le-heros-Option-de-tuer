@@ -278,23 +278,6 @@ button:active {
   background-image: none;
 }
 
-.badchoice5 .game {
-  transition: 0.5s;
-  border-style: outset;
-  border-color: red;
-  background-color: rgb(240, 77, 77);
-}
-.badchoice5 h1 {
-  transition: 0.5s;
-  color: pink;
-}
-
-.badchoice5 .content::before {
-  transition: 0.5s;
-  background-color: rgb(112, 3, 3);
-  background-image: none;
-}
-
 .badchoice2 .content::before {
   background-image: url("assets/img/Gif/police-lights.gif");
 }
@@ -339,6 +322,22 @@ button:active {
 }
 
 .badchoice5 .content::before {
+  transition: 0.5s;
+  background-color: rgb(112, 3, 3);
+  background-image: none;
+}
+
+.badchoice7 .game {
+  transition: 0.5s;
+  border-style: outset;
+  border-color: red;
+  background-color: rgb(240, 77, 77);
+}
+.badchoice7 h1 {
+  transition: 0.5s;
+  color: pink;
+}
+.badchoice7 .content::before {
   transition: 0.5s;
   background-color: rgb(112, 3, 3);
   background-image: none;

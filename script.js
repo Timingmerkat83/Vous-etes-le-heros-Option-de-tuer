@@ -483,19 +483,21 @@ function goToChapter(chapterName) {
     ding.play();
   }
 
-  //PS5.1 Checkbox Audio
-  let checkbox = document.getElementById("myCheck");
-  checkbox.checked = true;
-  checkbox.addEventListener("click", function () {
-    if (checkbox.checked == true) {
-      ding.pause();
-      console.log("Le son du jeu est activé!");
-    } else if (checkbox.checked == false) {
-      console.log("Le son du jeu est désactivé!");
-    }
-  });
   /*Fin de la fonction goToChapter*/
 }
+
+//PS5.1 Checkbox Audio
+let checkbox = document.getElementById("myCheck");
+checkbox.checked = true;
+checkbox.addEventListener("change", function () {
+  if (checkbox.checked == true) {
+    ding.pause();
+    sounds.innerHTML = `<audio src="${chaptersObj[chapterName].audio}" muted> `;
+    console.log("Le son du jeu est activé!");
+  } else if (checkbox.checked == false) {
+    console.log("Le son du jeu est désactivé!");
+  }
+});
 
 //Exercice du PS4.2
 let loadGame = localStorage.getItem("progress");
