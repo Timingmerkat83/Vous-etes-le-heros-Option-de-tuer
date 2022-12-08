@@ -489,15 +489,15 @@ function goToChapter(chapterName) {
 }
 
 //PS5.1 Checkbox Audio
-let checkbox = document.getElementById("myCheck");
+const checkbox = document.getElementById("myCheck");
 checkbox.checked = true;
 checkbox.addEventListener("change", function () {
-  if (checkbox.checked == true) {
+  if (checkbox.checked == false) {
     ding.pause();
     sounds.innerHTML = `<audio src="${chaptersObj[chapterName].audio}" muted> `;
-    console.log("Le son du jeu est activé!");
-  } else if (checkbox.checked == false) {
     console.log("Le son du jeu est désactivé!");
+  } else if (checkbox.checked == true) {
+    console.log("Le son du jeu est activé!");
   }
 });
 
