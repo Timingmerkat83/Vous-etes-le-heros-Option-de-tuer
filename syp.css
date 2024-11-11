@@ -14,12 +14,12 @@ aside {
   background-color: #034967;
   padding: 10px;
   border-radius: 10px;
-  position: absolute;
-  right: 0;
-  bottom: 0;
+  position: fixed;  /* Use fixed to keep it in the same position */
+  bottom: 10px;     /* Adjust distance from the bottom */
+  left: 10px;       /* Adjust distance from the left */
   margin: auto;
+  z-index: 10;      /* Ensure it appears on top of other elements */
 }
-
 .content::before {
   content: "";
   position: fixed;
@@ -136,6 +136,7 @@ button:active {
 }
 .checkbox {
   display: inline-flex;
+  align-items: center;
   cursor: pointer;
   position: relative;
 }
@@ -144,20 +145,19 @@ button:active {
   border-radius: 5px;
 }
 
+.controls-buttons{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
 .checkbox > span {
   color: #34495e;
   padding: 0.5rem 0.25rem;
 }
 
-.reset {
-  background-color: #c06d00;
-  width: 8em;
-  align-self: flex-end;
-}
 
-.reset:hover {
-  background-color: rgb(134, 64, 6);
-}
+
 
 .checkbox > input {
   height: 30px;
@@ -380,6 +380,31 @@ button:active {
   background-size: contain;
 }
 
+ .reset {
+    background-color: #c06d00;
+    width: 8em;  /* Same width as other buttons */
+    height: 60px; /* Same height as other buttons */
+    padding: 10px; /* Same padding as other buttons */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: red;
+    border-width: 5px;
+    border-radius: 300px;
+    transition: 0.5s;
+    align-self: flex-end;
+  }
+  
+  .reset img {
+    width: 30%;  /* Adjust the width of the SVG icon to fit inside the button */
+    height: auto;  /* Maintain aspect ratio */
+  }
+  .reset:hover {
+    background-color: rgb(134, 64, 6);
+  }
+  .reset:hover {
+    background-color: rgb(134, 64, 6);
+  }
 /* Media Query for Mobile Devices */
 @media (max-width: 768px) {
   .game {
@@ -402,9 +427,7 @@ button:active {
     width: 7em;
   }
 
-  .reset {
-    width: 6em;
-  }
+ 
   aside{
     display: none;
   }
