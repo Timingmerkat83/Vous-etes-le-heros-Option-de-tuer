@@ -398,11 +398,14 @@ button:active {
 
   button {
     font-size: 0.9em;
-    height: 50px;
+    height: auto;
     width: 7em;
   }
 
   .reset {
     width: 6em;
+  }
+  aside{
+    display: none;
   }
 }
