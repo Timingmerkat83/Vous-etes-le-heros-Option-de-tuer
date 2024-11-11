@@ -378,3 +378,30 @@ button:active {
   background-position: 0 100%;
   background-size: contain;
 }
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  .game {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  .chapter-img {
+    padding: 10px;
+  }
+
+  button {
+    font-size: 0.9em;
+    height: 50px;
+    width: 7em;
+  }
+
+  .reset {
+    width: 6em;
+  }
+}
