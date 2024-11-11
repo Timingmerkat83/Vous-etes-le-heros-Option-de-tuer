@@ -490,15 +490,18 @@ function goToChapter(chapterName) {
 
 //PS5.1 Checkbox Audio
 const checkbox = document.getElementById("myCheck");
-checkbox.checked = true;
 checkbox.addEventListener("change", function () {
-  if (checkbox.checked == true) {
-    ding.currentTime = 0;
-    ding.play();
-    sounds.innerHTML = `<audio src="${chaptersObj[chapterName].audio}" muted> `;
-    console.log("Le son du jeu est désactivé!");
-  } else if (checkbox.checked == true) {
+  if (checkbox.checked) {
+    // Sound ON
+    ding.muted = false;
+    sounds.innerHTML = `<audio src="${chaptersObj[chapterName].audio}" autoplay>`;
     console.log("Le son du jeu est activé!");
+  } else {
+    // Sound OFF
+    ding.pause();
+    ding.muted = true; // Mute the notification sound
+    sounds.innerHTML = `<audio src="${chaptersObj[chapterName].audio}" muted autoplay>`;
+    console.log("Le son du jeu est désactivé!");
   }
 });
 
