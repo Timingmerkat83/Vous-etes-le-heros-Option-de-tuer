@@ -1,4 +1,6 @@
+// ELEMENTS DU PROJET
 const Content = document.querySelector(".content");
+const ding = new Audio("assets/audio/notification.mp3");
 
 let StartButton = "Commencer l'histoire";
 let chaptersObj = {
@@ -66,6 +68,7 @@ let chaptersObj = {
         action: "goToChapter('prologue')",
       },
     ],
+    end: "1",
   },
 
   chapitre2: {
@@ -131,6 +134,7 @@ let chaptersObj = {
         action: "goToChapter('prologue')",
       },
     ],
+    end: "2",
   },
 
   badchoice3: {
@@ -144,6 +148,7 @@ let chaptersObj = {
         action: "goToChapter('prologue')",
       },
     ],
+    end: "3",
   },
 
   chapitre3: {
@@ -183,6 +188,7 @@ let chaptersObj = {
         action: "goToChapter('prologue')",
       },
     ],
+    end: "4",
   },
 
   badchoice5: {
@@ -197,6 +203,7 @@ let chaptersObj = {
         action: "goToChapter('prologue')",
       },
     ],
+    end: "5",
   },
 
   chapitre4: {
@@ -241,6 +248,7 @@ let chaptersObj = {
         action: "goToChapter('prologue')",
       },
     ],
+    end: "6",
   },
 
   ch4altpath: {
@@ -279,7 +287,8 @@ let chaptersObj = {
   },
   ch4tryagain_key: {
     subtitle:
-      "Professeur Crâne envoie ses hommes vous kidnappé! Cependant... 🔑",
+      "Professeur Crâne envoie ses hommes vous kidnappé!" + 
+      " Cependant... 🔑",
     text:
       "Vous avez accès à la page Facebook du Professeur Crâne. Sauf qu'il détecte votre présence sur son profile" +
       "et décide d'envoyer ses hommes vous kidnapper." +
@@ -292,6 +301,7 @@ let chaptersObj = {
         action: "goToChapter('prologue')",
       },
     ],
+    end: "7",
   },
   chapitre5: {
     subtitle: "C'était bon, en route maintenant!",
@@ -334,6 +344,7 @@ let chaptersObj = {
         action: "goToChapter('prologue')",
       },
     ],
+    end: "8",
   },
   who_is_driving: {
     subtitle: "Parfait vous avez la clé!!",
@@ -361,6 +372,7 @@ let chaptersObj = {
         action: "goToChapter('prologue')",
       },
     ],
+    end: "9",
   },
   badchoice7: {
     subtitle: "Oh oh vous avez été reperé!",
@@ -373,6 +385,7 @@ let chaptersObj = {
         action: "goToChapter('prologue')",
       },
     ],
+    end: "10",
   },
   chapitre6: {
     subtitle: "Le choix final",
@@ -400,6 +413,7 @@ let chaptersObj = {
         action: "goToChapter('prologue')",
       },
     ],
+    end: "11",
   },
   goodending: {
     subtitle: "Professeur Crâne vie, mais derrière les barreaux.",
@@ -412,6 +426,7 @@ let chaptersObj = {
         action: "goToChapter('prologue')",
       },
     ],
+    end: "12",
   },
 };
 //PS4.2
@@ -445,6 +460,7 @@ function goToChapter(chapterName) {
   /**Options PS3 */
   let optionsArr = chaptersObj[chapterName].option;
   let buttonPanel = document.querySelector(".btn-panel");
+  buttonPanel.innerHTML = ""; // Clear existing buttons
   let buttonTag;
   let optionText;
   let optionAction;
@@ -480,7 +496,7 @@ function goToChapter(chapterName) {
   //LocalStorage PS4.2
   localStorage.setItem("progress", chapterName);
 
-  const ding = new Audio("assets/audio/notification.mp3");
+
   if (chaptersObj[chapterName].audio == undefined) {
     ding.play();
   }
@@ -552,3 +568,49 @@ reset.addEventListener("click", function () {
     goToChapter("prologue");
   }
 });
+
+// Function to apply the theme based on the saved preference
+function applyTheme() {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'light') {
+    document.body.classList.add('light-theme');
+    document.getElementById('themeToggle').innerHTML = '<i class="fas fa-sun"></i>'; // Sun icon for light theme
+  } else {
+    document.body.classList.remove('light-theme');
+    document.getElementById('themeToggle').innerHTML = '<i class="fas fa-moon"></i>'; // Moon icon for dark theme
+  }
+}
+
+// Fonction pour appliquer le thème sauvegardé
+function applyTheme() {
+  const savedTheme = localStorage.getItem('theme');
+  
+  if (savedTheme === 'light') {
+    document.body.classList.add('light-theme');  // Applique le thème clair
+    document.getElementById('themeToggle').innerHTML = '<i class="fas fa-sun"></i>';  // Affiche l'icône du soleil
+  } else {
+    document.body.classList.remove('light-theme');  // Applique le thème sombre
+    document.getElementById('themeToggle').innerHTML = '<i class="fas fa-moon"></i>';  // Affiche l'icône de la lune
+  }
+}
+
+// Event listener pour le bouton de changement de thème
+document.getElementById('themeToggle').addEventListener('click', function () {
+  const isLightTheme = document.body.classList.contains('light-theme');
+  
+  if (isLightTheme) {
+    // Passage au thème sombre
+    document.body.classList.remove('light-theme');
+    localStorage.setItem('theme', 'dark');
+    this.innerHTML = '<i class="fas fa-moon"></i>';  // Icône lune pour thème sombre
+  } else {
+    // Passage au thème clair
+    document.body.classList.add('light-theme');
+    localStorage.setItem('theme', 'light');
+    this.innerHTML = '<i class="fas fa-sun"></i>';  // Icône soleil pour thème clair
+  }
+});
+
+// Applique le thème au chargement de la page
+window.addEventListener('load', applyTheme);
+

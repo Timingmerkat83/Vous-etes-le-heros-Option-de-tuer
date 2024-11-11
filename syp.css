@@ -1,3 +1,7 @@
+html, body, .game, h1, p, button, aside, .chapter-img, .reset {
+  transition: all 0.5s ease-in-out; /* Smooth transition for all properties */
+}
+
 * {
   box-sizing: border-box;
 }
@@ -10,8 +14,16 @@ body {
   align-items: center;
   flex-direction: column;
 }
+
+
+body {
+  background-color: #012737; /* Dark background */
+  color: white; /* Dark theme text color */
+}
+
 aside {
-  background-color: #034967;
+  background-color: #012737;
+  color: white;
   padding: 10px;
   border-radius: 10px;
   position: fixed;  /* Use fixed to keep it in the same position */
@@ -20,6 +32,7 @@ aside {
   margin: auto;
   z-index: 10;      /* Ensure it appears on top of other elements */
 }
+
 .content::before {
   content: "";
   position: fixed;
@@ -46,7 +59,8 @@ aside {
   justify-content: space-around;
   align-items: center;
   overflow: auto;
-  background-color: #088dc6;
+  color: black;
+  background-color: #03648d;
   width: 900px;
   min-height: 100px;
   border-style: outset;
@@ -54,7 +68,7 @@ aside {
   border-width: 5px;
   border-radius: 10px;
   padding: 5px;
-  box-shadow: 20px 20px 5px;
+
 }
 
 h1 {
@@ -143,6 +157,14 @@ button:active {
 .controls {
   background-color: rgb(48, 153, 205);
   border-radius: 5px;
+}
+
+.controls button{
+  width: 100px;
+}
+
+.controls i {
+  font-size: 1.5rem;
 }
 
 .controls-buttons{
@@ -405,6 +427,96 @@ button:active {
   .reset:hover {
     background-color: rgb(134, 64, 6);
   }
+
+
+  /* Light theme adjustments */
+.light-theme {
+  background-color: #f4f4f4; /* Light background */
+  color: #2f2f2f; /* Dark text color for readability */
+}
+
+.light-theme aside {
+  background-color: #aadafc; /* Lighter background for the aside */
+  color: #2f2f2f; /* Dark text in the aside */
+}
+
+.light-theme .game {
+  background-color: #ffffff; /* White background for game */
+  border-color: #4caf50; /* Green border for the light theme */
+  color: #2f2f2f; /* Dark text for readability */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.light-theme h1 {
+  color: #00796b; /* Light green text */
+  text-shadow: 2px 2px #ffffff;
+}
+
+.light-theme p {
+  color: #2f2f2f; /* Dark text for paragraphs */
+}
+
+.light-theme button {
+  background-color: #f2a1a1; /* Green buttons for the light theme */
+  color: white;
+  border-color: #8e3838; /* Darker green border */
+}
+
+.light-theme button:hover {
+  background-color: #8e3838;
+}
+
+.light-theme button:active {
+  background-color: #602525;
+}
+
+.light-theme .checkbox > input {
+  background-color: #af4c4c;
+}
+
+.light-theme .checkbox > input:checked {
+  background-color: #8e3838;
+}
+
+.light-theme .reset {
+  background-color: #ff9800; /* Orange reset button */
+}
+
+/* Light theme images and other elements */
+.light-theme .chapter-img {
+  border-radius: 10px;
+}
+
+.light-theme .content::before {
+  background-color: #f4f4f4; /* Light background */
+}
+
+/* Light theme for specific "bad choices" and ending messages */
+.light-theme .badchoice1 .game {
+  background-color: #ffeb3b; /* Light yellow background */
+}
+
+.light-theme .badchoice1 h1 {
+  color: #f44336; /* Red for bad choice */
+}
+
+.light-theme .badchoice2 .content::before {
+  background-image: url("assets/img/Gif/police-lights.gif");
+}
+
+/* Reset light theme for chapter backgrounds */
+.light-theme .ch4altpath .game {
+
+  background-color: #fff;
+}
+
+.light-theme .chapitre5 .game {
+  background-color: #fff;
+}
+
+.light-theme .chapitre6 .game {
+  background-color: #fff;
+}
 /* Media Query for Mobile Devices */
 @media (max-width: 768px) {
   .game {
