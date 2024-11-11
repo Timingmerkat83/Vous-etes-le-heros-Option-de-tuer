@@ -396,7 +396,7 @@ button:active {
   }
   
   .reset img {
-    width: 30%;  /* Adjust the width of the SVG icon to fit inside the button */
+    width: 35%;  /* Adjust the width of the SVG icon to fit inside the button */
     height: auto;  /* Maintain aspect ratio */
   }
   .reset:hover {
@@ -428,7 +428,9 @@ button:active {
   }
 
  
-  aside{
-    display: none;
+  aside {
+    position: static; /* Changed to static positioning for small screens */
+    display: block;
+    margin: 10px;
   }
 }

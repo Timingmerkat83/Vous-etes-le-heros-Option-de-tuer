@@ -508,14 +508,13 @@ checkbox.addEventListener("change", function () {
 //Exercice du PS4.2
 let loadGame = localStorage.getItem("progress");
 
-if (loadGame == null) {
+if (!loadGame) {
   goToChapter("prologue");
   console.log("prologue");
 } else {
   goToChapter(loadGame);
   console.log(loadGame);
 }
-
 //Je vais être honnête je n'ai AUCUNE idée de comment faire cette partie là. Je suis débutant en fonctions javascript et j'y comprends rien
 let keyFounded = false;
 
@@ -543,11 +542,10 @@ let isKeyFounded = function () {
 let reset;
 reset = document.querySelector(".reset");
 reset.addEventListener("click", function () {
-  if (loadGame == null) {
-    alert("Vous n'avez pas encore commencez une partie");
+  if (!loadGame) {
+    alert("Vous n'avez pas encore commencé une partie.");
   } else {
-    console.log("Partie effacé avec succès");
-    alert("Votre partie a été effacé!");
+    alert("La partie a été recommencée");
     localStorage.removeItem("progress");
     localStorage.removeItem("key_founded");
     Content.classList.remove("isVisible");
